@@ -1,0 +1,92 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class qgateconfirmLogout
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.chooseuserdelete = New System.Windows.Forms.Label()
+        Me.btnConfirm = New System.Windows.Forms.PictureBox()
+        Me.pbCancel = New System.Windows.Forms.PictureBox()
+        CType(Me.btnConfirm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCancel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("MADE Dillan", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(38, 28)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(268, 43)
+        Me.ComboBox1.TabIndex = 2
+        '
+        'chooseuserdelete
+        '
+        Me.chooseuserdelete.AutoSize = True
+        Me.chooseuserdelete.Location = New System.Drawing.Point(136, 97)
+        Me.chooseuserdelete.Name = "chooseuserdelete"
+        Me.chooseuserdelete.Size = New System.Drawing.Size(78, 13)
+        Me.chooseuserdelete.TabIndex = 3
+        Me.chooseuserdelete.Text = "lbSelectLogout"
+        '
+        'btnConfirm
+        '
+        Me.btnConfirm.BackColor = System.Drawing.Color.Lime
+        Me.btnConfirm.Location = New System.Drawing.Point(242, 97)
+        Me.btnConfirm.Name = "btnConfirm"
+        Me.btnConfirm.Size = New System.Drawing.Size(100, 50)
+        Me.btnConfirm.TabIndex = 1
+        Me.btnConfirm.TabStop = False
+        '
+        'pbCancel
+        '
+        Me.pbCancel.BackColor = System.Drawing.Color.Red
+        Me.pbCancel.Location = New System.Drawing.Point(12, 97)
+        Me.pbCancel.Name = "pbCancel"
+        Me.pbCancel.Size = New System.Drawing.Size(100, 50)
+        Me.pbCancel.TabIndex = 0
+        Me.pbCancel.TabStop = False
+        '
+        'qgateconfirmLogout
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(354, 159)
+        Me.Controls.Add(Me.chooseuserdelete)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnConfirm)
+        Me.Controls.Add(Me.pbCancel)
+        Me.Name = "qgateconfirmLogout"
+        Me.Text = "confirmLogout"
+        CType(Me.btnConfirm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCancel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents pbCancel As PictureBox
+    Friend WithEvents btnConfirm As PictureBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents chooseuserdelete As Label
+End Class
