@@ -271,6 +271,8 @@
 
 
 
+
+
     'Public Function get_During_Time_Worker(stationid As String, workdate As String, workshift As String)
 
     '    Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
@@ -314,6 +316,16 @@
 
     End Function
 
+    Public Function get_Lotcur(timecur As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/GETLOT_TBKKFATHAILAND?timecur=" & timecur
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+
+
+    End Function
 
 
 
@@ -354,14 +366,14 @@
 
 
 
-    Public Function insert_tag_fa(codemaster As String, tagfa As String, linecd As String, plandate As String, seqplan As String, partno As String, actualdate1 As String, snp As String, lotno As String, actualdate2 As String, seqactual As String, plant As String, box As String)
+    Public Function insert_tag_fa(codemaster As String, tagfa As String, linecd As String, plandate As String, seqplan As String, partno As String, actualdate1 As String, snp As String, lotno As String, actualdate2 As String, seqactual As String, plant As String, box As String, lotcur As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertTAGFA?codemaster=" & codemaster & "&tagfa=" & tagfa &
                                "&linecd=" & linecd & "&plandate=" & plandate & "&seqplan=" & seqplan &
                                "&partno=" & partno & "&actualdate1=" & actualdate1 & "&snp=" & snp &
                                "&lotno=" & lotno & "&actualdate2=" & actualdate2 & "&seqactual=" & seqactual &
-                               "&plant=" & plant & "&box=" & box
+                               "&plant=" & plant & "&box=" & box & "&lotcur=" & lotcur
         Dim rs = Api.Load_data(URL)
 
         Return rs
@@ -415,6 +427,16 @@
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertDefectcount?stationid=" & stationid & "&defectcodeid=" & defectcodeid & "&numdefect=" & numdefect & "&staffname=" & staffname & "&ngornc=" & ngornc
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+    End Function
+
+
+    Public Function insert_Tag_Qgate_complete(oldtag As String, countbox As String, tagcount As String, empcode As String, tagcomplete As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertTagQgateComplete?oldtag=" & oldtag & "&countbox=" & countbox & "&tagcount=" & tagcount & "&empcode=" & empcode & "&tagcomplete=" & tagcomplete
         Dim rs = Api.Load_data(URL)
 
         Return rs
@@ -486,7 +508,12 @@
         Return rs
     End Function
 
-
+    Public Function update_Config_Select_Part(partno As String, macadd As String)
+        Dim Api As New api()
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/updatedata/updateSelectPart?partno=" & partno & "&macadd=" & macadd
+        Dim rs = Api.Load_data(URL)
+        Return rs
+    End Function
 
 
 

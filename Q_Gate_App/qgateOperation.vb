@@ -13,7 +13,7 @@ Public Class qgateOperation
     Dim PartSerialNoSub As String
     Dim num As Integer = 0
     Dim workshift As String
-
+    Dim t
     Dim productrank = "A"
     Dim productcheckcount As Integer = 1
     Dim workshiftid
@@ -39,7 +39,7 @@ Public Class qgateOperation
         lbZone.Text = zoneset
         lbStation.Text = setstationid
         getpartno = Module1.qgate_part_no
-        lbPartNum.Text = Module1.get_part()
+        lbPartNum.Text = Module1.qgate_part_no
         lbPartName.Text = Module1.get_partname()
         lbLotNum.Text = Module1.partlotno
         lbSnp.Text = Module1.partasnp
@@ -68,9 +68,11 @@ Public Class qgateOperation
             If substringqrproduct(tbQrSerial.Text, getpartno) Then
 
                 If CDbl(Val(Trim(productcount))) = CDbl(Val(Trim(partasnp))) Then
+                    tbQrSerial.Enabled = False
                     btnFinish.Show()
 
                 Else
+                    tbQrSerial.Enabled = True
                     btnFinish.Hide()
 
                 End If
@@ -144,6 +146,7 @@ Public Class qgateOperation
                     Dim dict5 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(idtagfa)
                     For Each item As Object In dict5
                         tagfaid = item("ifts_id").ToString
+                        lotcurrent = item("ifts_lot_current").ToString
                     Next
                     Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(idnamedigit)
                     For Each item As Object In dict6
@@ -166,6 +169,16 @@ Public Class qgateOperation
                         'MsgBox("counttime=====> " & counttime)
                         MsgBox("INSERT===>>>>>> ")
                         productcheckcount = 1
+
+
+                        Module1.qrpro.Add(qralldmc)
+                        'MsgBox(Module1.qrpro(j))
+                        t &= Module1.qrpro(j) & vbCrLf
+                        'MsgBox("-" & t & "-")
+                        j += 1
+
+
+
                         Dim rscountProduct = md.insert_qr_product(tagfaid, configposition, namedigitid, workshiftid, productcount, productrank,
                         productcheckcount, qralldmc, num_user(0), counttime)
                         qrproduct = tbQrSerial.Text
@@ -224,6 +237,9 @@ Public Class qgateOperation
     End Function
 
     Private Sub btnFinish_Click(sender As Object, e As EventArgs) Handles btnFinish.Click
+        MsgBox(t)
+        Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & "001")))
+        md.insert_Tag_Qgate_complete(tagfaid, "001", "1", num_user(0), tagqgate)
         productcount = 0
         productcountNC = 0
         productcountNG = 0

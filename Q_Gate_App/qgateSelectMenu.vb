@@ -84,10 +84,10 @@ Public Class qgateSelectMenu
         workdate = DateTime.Now.ToString("yyyy-MM-dd")
 
         Dim checkDuringtime = md.get_During_Time(Trim(configposition), Trim(workdate), Trim(workshift))
-        MsgBox("configposition===> " & configposition)
-        MsgBox("workdate===> " & workdate)
-        MsgBox("num_user(0)===> " & num_user(0))
-        MsgBox("checkDuringtime===> " & checkDuringtime)
+        'MsgBox("configposition===> " & configposition)
+        'MsgBox("workdate===> " & workdate)
+        'MsgBox("num_user(0)===> " & num_user(0))
+        'MsgBox("checkDuringtime===> " & checkDuringtime)
         If type = "1" Then
             If checkDuringtime = "0" Then
 

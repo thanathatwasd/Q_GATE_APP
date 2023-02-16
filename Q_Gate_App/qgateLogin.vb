@@ -5,7 +5,7 @@ Public Class qgateLogin
 
     Dim staffname
     Dim staffcode
-    Dim Macaddress
+    Dim Macadd
     Private Sub qgateLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
         md.get_LocalHost()
@@ -20,7 +20,7 @@ Public Class qgateLogin
             If My.Computer.Network.Ping("192.168.161.101") Then
 
 
-                Macaddress = md.get_Mac_Address(getMacAddress)
+                Macadd = md.get_Mac_Address(getMacAddress)
 
                 If Macaddress <> "0" Then
                     If checkLogin(tbLoginUser.Text) Then
@@ -49,17 +49,19 @@ Public Class qgateLogin
     Public Function checkPosition()
 
 
-        Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Macaddress)
+        Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Macadd)
         For Each item As Object In dict2
             setphaseid = item("mpa_id").ToString
             setzoneid = item("mza_id").ToString
             setstationid = item("msa_id").ToString
-
-
+            setstationid = item("msa_id").ToString
+            Module1.qgate_part_no = item("mcd_select_part").ToString
+            Macaddress = item("mcd_mac_address").ToString
         Next
+        qgateSelectPart.checkPartTag(qgate_part_no)
 
         getTypeByPosition(setphaseid, setzoneid, setstationid)
-        MsgBox(type)
+
         Dim zone = md.get_Zone_Set_menu(setzoneid)
 
 
@@ -150,7 +152,5 @@ Public Class qgateLogin
         Return status
     End Function
 
-    Private Sub tbLoginUser_TextChanged(sender As Object, e As EventArgs) Handles tbLoginUser.TextChanged
 
-    End Sub
 End Class

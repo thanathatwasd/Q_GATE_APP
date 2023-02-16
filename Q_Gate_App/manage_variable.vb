@@ -24,6 +24,7 @@ Module Module1
     Public user4 As String = ""
     Public user5 As String = ""
     Public dmcqrscan As String = ""
+    Public j = 0
     Public userpermi(4) As String
     Public Locationpart As String = ""
     Public phaseplant As String = ""
@@ -37,7 +38,8 @@ Module Module1
     Public substringname(5) As String
     Public partsubstart(5) As String
     Public partsubend(5) As String
-
+    Public qrpro As List(Of String) = New List(Of String)
+    Public lotcur As String = ""
     Public partcodemaster As String = ""
     Public partline As String = ""
     Public partplandate As String = ""
@@ -54,7 +56,8 @@ Module Module1
     Public tagfa As String = ""
     Public partnamedigit As String
     Public shift As String
-
+    Public lotcurrent As String = ""
+    Public Macaddress
     Public dmcornondmc As String = ""
     Public productcount = 0
     Public productcountNG = 0
@@ -141,12 +144,7 @@ Module Module1
         Return qgate_ctUser
     End Function
     ''qgateselectpart
-    Public Sub set_part(part As String)
-        qgate_part = part
-    End Sub
-    Public Function get_part()
-        Return qgate_part
-    End Function
+
     Public Sub set_partname(partname As String)
         qgate_part_name = partname
     End Sub

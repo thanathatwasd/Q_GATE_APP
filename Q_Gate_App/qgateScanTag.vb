@@ -30,9 +30,10 @@ Public Class qgateScanTag
     End Sub
 
     Private Sub qgateScanTag_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Enabled = True
         lbZone.Text = zoneset
         lbStation.Text = setstationid
-        lbpart.Text = Module1.get_part()
+        lbpart.Text = Module1.qgate_part_no
         lbUserName.Text = Module1.num_user(0)
         'MsgBox("Type ====>  " & type)
         If type = "1" Then
@@ -49,6 +50,10 @@ Public Class qgateScanTag
     Private Sub tbScanTag_KeyDown(sender As Object, e As KeyEventArgs) Handles tbScanTag.KeyDown
         If e.KeyCode = Keys.Enter Then
 
+            Dim timenow = (DateTime.Now.ToString("yyyy-MM-dd"))
+            'MsgBox("timenow==> " & timenow)
+            lotcur = md.get_Lotcur(timenow)
+            'MsgBox("lotcur==> " & lotcur)
             If type = "1" Then
                 If lbpart.Text = "NO_DATA" Then
                     tbScanTag.Text = ""
@@ -75,6 +80,9 @@ Public Class qgateScanTag
 
 
     End Sub
+
+
+
 
 
 
@@ -129,18 +137,9 @@ Public Class qgateScanTag
                         partbox = scantag.Substring(100, 3)
                         'MsgBox("partbox==>" & partbox)
                         Dim rsinserttagfa = md.insert_tag_fa(codemaster, scantag, partline, partplandate, partseqplan, partnotagfa, partactualdate1, partasnp,
-                                                       partlotno, partactualdate2, partseqactual, partplant, partbox)
-
+                                                       partlotno, partactualdate2, partseqactual, partplant, partbox, lotcur)
                         tbScanTag.Text = ""
-
-
                         Module1.tagfa = scantag
-
-
-
-
-
-
                         'MsgBox("dmc===>dmc")
                         status = True
                         qgateOperation.Show()
@@ -200,7 +199,6 @@ Public Class qgateScanTag
                     'MsgBox("partplandate==>" & partplandate)
                     partseqplan = scantag.Substring(16, 3)
                     'MsgBox("partseqplan==>" & partseqplan)
-
                     partactualdate1 = scantag.Substring(44, 8)
                     'MsgBox("partactualdate1==>" & partactualdate1)
                     partasnp = scantag.Substring(52, 6)
@@ -216,7 +214,7 @@ Public Class qgateScanTag
                     partbox = scantag.Substring(100, 3)
                     'MsgBox("partbox==>" & partbox)
                     Dim rsinserttagfa = md.insert_tag_fa(codemaster, scantag, partline, partplandate, partseqplan, partnotagfa, partactualdate1, partasnp,
-                                                       partlotno, partactualdate2, partseqactual, partplant, partbox)
+                                                       partlotno, partactualdate2, partseqactual, partplant, partbox, lotcur)
 
                     tbScanTag.Text = ""
 

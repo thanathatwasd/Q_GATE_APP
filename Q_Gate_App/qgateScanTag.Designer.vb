@@ -22,15 +22,17 @@ Partial Class qgateScanTag
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbUserName = New System.Windows.Forms.Label()
         Me.lbpart = New System.Windows.Forms.Label()
         Me.pbBackToMenu = New System.Windows.Forms.PictureBox()
         Me.lbStation = New System.Windows.Forms.Label()
         Me.lbZone = New System.Windows.Forms.Label()
         Me.tbScanTag = New System.Windows.Forms.TextBox()
         Me.pbSelectModel = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbUserName = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.pbBackToMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSelectModel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +53,30 @@ Partial Class qgateScanTag
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(801, 600)
         Me.Panel2.TabIndex = 6
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(425, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(71, 26)
+        Me.Label2.TabIndex = 48
+        Me.Label2.Text = "User : "
+        '
+        'lbUserName
+        '
+        Me.lbUserName.AutoSize = True
+        Me.lbUserName.BackColor = System.Drawing.Color.Transparent
+        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.lbUserName.Location = New System.Drawing.Point(502, 9)
+        Me.lbUserName.Name = "lbUserName"
+        Me.lbUserName.Size = New System.Drawing.Size(22, 26)
+        Me.lbUserName.TabIndex = 47
+        Me.lbUserName.Text = "-"
         '
         'lbpart
         '
@@ -116,30 +142,6 @@ Partial Class qgateScanTag
         Me.pbSelectModel.TabIndex = 2
         Me.pbSelectModel.TabStop = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(425, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 26)
-        Me.Label2.TabIndex = 48
-        Me.Label2.Text = "User : "
-        '
-        'lbUserName
-        '
-        Me.lbUserName.AutoSize = True
-        Me.lbUserName.BackColor = System.Drawing.Color.Transparent
-        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbUserName.Location = New System.Drawing.Point(502, 9)
-        Me.lbUserName.Name = "lbUserName"
-        Me.lbUserName.Size = New System.Drawing.Size(22, 26)
-        Me.lbUserName.TabIndex = 47
-        Me.lbUserName.Text = "-"
-        '
         'qgateScanTag
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -167,4 +169,5 @@ Partial Class qgateScanTag
     Friend WithEvents lbpart As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lbUserName As Label
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -131,6 +131,10 @@ Public Class qgateOperationManual
     End Sub
 
     Private Sub btnFinish_Click(sender As Object, e As EventArgs) Handles btnFinish.Click
+
+        Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & "001")))
+        MsgBox("tagqgate==>  " & tagqgate)
+        md.insert_Tag_Qgate_complete(tagfaid, "001", "1", num_user(0), tagqgate)
         productcount = 0
         productcountNC = 0
         productcountNG = 0

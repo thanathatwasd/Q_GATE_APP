@@ -114,7 +114,7 @@ Public Class qgateDefectNg
                 productcount = productcount - 1
                 productcountNG = productcountNG + 1
                 md.update_flg_product(productid)
-
+                j -= 1
                 qgateOperation.Show()
                 qgateOperation.tbCounterNg.Text = productcountNG
                 qgateOperation.tbcounter.Text = productcount

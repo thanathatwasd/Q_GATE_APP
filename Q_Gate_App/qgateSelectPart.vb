@@ -104,14 +104,13 @@ Public Class qgateSelectPart
                 checkPartTag(Module1.qgate_part_no)
                 checkLogin()
                 infoselectpart()
-                Module1.set_part(cbSelectPart.SelectedItem)
                 qgateScanTag.Show()
+                md.update_Config_Select_Part(Trim(cbSelectPart.SelectedItem), Trim(Macaddress))
                 status = True
                 Me.Close()
             Else
                 status = False
             End If
-
         Else
             MsgBox("Please Select PART")
             status = False
