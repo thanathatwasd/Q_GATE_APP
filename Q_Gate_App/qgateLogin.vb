@@ -11,6 +11,7 @@ Public Class qgateLogin
         md.get_LocalHost()
         Dim ping = md.get_DatabaseServer()
 
+
     End Sub
     Private Sub tbemcard_KeyDown(sender As Object, e As KeyEventArgs) Handles tbLoginUser.KeyDown
 
@@ -18,8 +19,9 @@ Public Class qgateLogin
         If e.KeyCode = Keys.Enter Then
             If My.Computer.Network.Ping("192.168.161.101") Then
 
-                MsgBox("getMacAddress===> " & getMacAddress())
+
                 Macaddress = md.get_Mac_Address(getMacAddress)
+
                 If Macaddress <> "0" Then
                     If checkLogin(tbLoginUser.Text) Then
 
@@ -57,6 +59,7 @@ Public Class qgateLogin
         Next
 
         getTypeByPosition(setphaseid, setzoneid, setstationid)
+        MsgBox(type)
         Dim zone = md.get_Zone_Set_menu(setzoneid)
 
 
@@ -105,6 +108,7 @@ Public Class qgateLogin
 
         Catch ex As Exception
         End Try
+
         Return status
     End Function
 
@@ -133,10 +137,11 @@ Public Class qgateLogin
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(rs1)
             For Each item As Object In dict2
 
-                Type = item("mct_id").ToString
+                type = item("mct_id").ToString
                 configposition = item("mcd_id").ToString
-                Module1.phaseplant = item("mpa_phase_plant").ToString
 
+                Module1.phaseplant = item("mpa_phase_plant").ToString
+                Module1.timetocheckqr = item("mcd_inspection_time").ToString
 
             Next
         Else

@@ -49,7 +49,7 @@ Partial Class qgateReprintScanPrintDefect
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(629, 85)
+        Me.PictureBox2.Location = New System.Drawing.Point(631, 99)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(149, 66)
         Me.PictureBox2.TabIndex = 31
@@ -58,7 +58,7 @@ Partial Class qgateReprintScanPrintDefect
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(465, 85)
+        Me.PictureBox1.Location = New System.Drawing.Point(467, 99)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(148, 66)
         Me.PictureBox1.TabIndex = 30
@@ -67,7 +67,7 @@ Partial Class qgateReprintScanPrintDefect
         'pbPrint
         '
         Me.pbPrint.BackColor = System.Drawing.Color.Transparent
-        Me.pbPrint.Location = New System.Drawing.Point(631, 504)
+        Me.pbPrint.Location = New System.Drawing.Point(633, 518)
         Me.pbPrint.Name = "pbPrint"
         Me.pbPrint.Size = New System.Drawing.Size(147, 63)
         Me.pbPrint.TabIndex = 28
@@ -76,7 +76,7 @@ Partial Class qgateReprintScanPrintDefect
         'pbClear
         '
         Me.pbClear.BackColor = System.Drawing.Color.Transparent
-        Me.pbClear.Location = New System.Drawing.Point(463, 501)
+        Me.pbClear.Location = New System.Drawing.Point(465, 515)
         Me.pbClear.Name = "pbClear"
         Me.pbClear.Size = New System.Drawing.Size(148, 66)
         Me.pbClear.TabIndex = 27
@@ -85,7 +85,7 @@ Partial Class qgateReprintScanPrintDefect
         'pbBackReprintToMenu
         '
         Me.pbBackReprintToMenu.BackColor = System.Drawing.Color.Transparent
-        Me.pbBackReprintToMenu.Location = New System.Drawing.Point(25, 501)
+        Me.pbBackReprintToMenu.Location = New System.Drawing.Point(27, 515)
         Me.pbBackReprintToMenu.Name = "pbBackReprintToMenu"
         Me.pbBackReprintToMenu.Size = New System.Drawing.Size(155, 66)
         Me.pbBackReprintToMenu.TabIndex = 26
@@ -102,7 +102,7 @@ Partial Class qgateReprintScanPrintDefect
         Me.pnListPrint.Controls.Add(Me.lbModel)
         Me.pnListPrint.Controls.Add(Me.lbPartNum)
         Me.pnListPrint.Controls.Add(Me.tbScanTag)
-        Me.pnListPrint.Location = New System.Drawing.Point(23, 160)
+        Me.pnListPrint.Location = New System.Drawing.Point(25, 174)
         Me.pnListPrint.Name = "pnListPrint"
         Me.pnListPrint.Size = New System.Drawing.Size(755, 316)
         Me.pnListPrint.TabIndex = 29
@@ -198,7 +198,7 @@ Partial Class qgateReprintScanPrintDefect
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
         Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(737, 34)
+        Me.lbStation.Location = New System.Drawing.Point(739, 48)
         Me.lbStation.Name = "lbStation"
         Me.lbStation.Size = New System.Drawing.Size(16, 24)
         Me.lbStation.TabIndex = 33
@@ -210,7 +210,7 @@ Partial Class qgateReprintScanPrintDefect
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
         Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(464, 36)
+        Me.lbZone.Location = New System.Drawing.Point(466, 50)
         Me.lbZone.Name = "lbZone"
         Me.lbZone.Size = New System.Drawing.Size(16, 24)
         Me.lbZone.TabIndex = 32

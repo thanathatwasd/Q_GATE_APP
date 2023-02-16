@@ -3,7 +3,7 @@ Public Class qgateScanTag
     Dim md As New ModelVB
     Dim a As String
     Dim b As String
-    Dim type
+
     Dim status As Boolean = False
 
     Dim partno As String
@@ -30,12 +30,10 @@ Public Class qgateScanTag
     End Sub
 
     Private Sub qgateScanTag_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lbZone.Text = Module1.get_ZONE()
-        lbStation.Text = Module1.get_STAION()
+        lbZone.Text = zoneset
+        lbStation.Text = setstationid
         lbpart.Text = Module1.get_part()
         lbUserName.Text = Module1.num_user(0)
-
-        type = Module1.get_TYPE()
         'MsgBox("Type ====>  " & type)
         If type = "1" Then
             pbSelectModel.Visible = True

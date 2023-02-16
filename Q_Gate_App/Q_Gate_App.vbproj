@@ -128,12 +128,6 @@
     <Compile Include="qgateDefectNg.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="qgateDmcAndNonDmc.Designer.vb">
-      <DependentUpon>qgateDmcAndNonDmc.vb</DependentUpon>
-    </Compile>
-    <Compile Include="qgateDmcAndNonDmc.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="qgateLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -258,9 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="qgateDefectNg.resx">
       <DependentUpon>qgateDefectNg.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="qgateDmcAndNonDmc.resx">
-      <DependentUpon>qgateDmcAndNonDmc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="qgateLogin.resx">
       <DependentUpon>qgateLogin.vb</DependentUpon>

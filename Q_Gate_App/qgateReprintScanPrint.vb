@@ -30,12 +30,8 @@ Public Class qgateReprintScanPrint
         End If
 
     End Sub
-
-
     Public Function getDataScanPrint(tagscan As String)
-
         Dim tag = md.get_Data_Scan_Print(tagscan)
-        MsgBox("tag===> " & tag)
         If tag <> "0" Then
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(tag)
             For Each item As Object In dict2
@@ -57,10 +53,7 @@ Public Class qgateReprintScanPrint
             Next
 
         Else
-
-
             Dim Tagqr = md.get_Tag_By_Qrproduct(tagscan)
-            MsgBox("Tagqr==> " & Tagqr)
             If Tagqr <> "0" Then
                 Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Tagqr)
                 For Each item As Object In dict2
@@ -80,25 +73,26 @@ Public Class qgateReprintScanPrint
 
                     status = True
                 Next
-
             Else
                 MsgBox("ไม่พบ TAG ในวันนี้")
                 status = False
                 tbScanTag.Text = ""
             End If
-
         End If
         Return status
     End Function
 
     Private Sub pbPrint_Click(sender As Object, e As EventArgs) Handles pbPrint.Click
+        md.insert_log_reprint(tagcompleteid, num_user(0))
         btnprint()
     End Sub
+
     Public Function btnprint()
         If tagcompleteid <> "0" Then
             MsgBox("ปริ้น Tag สำเร็จ")
+
             md.insert_log_reprint(tagcompleteid, num_user(0))
-            MsgBox("สำเร็จ")
+            tbScanTag.Text = ""
             lbPartNum.Text = "-"
             lbQty.Text = "-"
             lbBoxNum.Text = "-"
@@ -118,6 +112,7 @@ Public Class qgateReprintScanPrint
     End Sub
 
     Private Sub pbClear_Click(sender As Object, e As EventArgs) Handles pbClear.Click
+        tbScanTag.Text = ""
         lbPartNum.Text = "-"
         lbQty.Text = "-"
         lbBoxNum.Text = "-"

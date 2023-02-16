@@ -25,8 +25,8 @@ Public Class qgateOperationManual
         tbCounterNg.Text = 0
         Module1.qgate_part_no = ""
         lbUserName.Text = Module1.num_user(0)
-        lbZone.Text = Module1.get_ZONE()
-        lbStation.Text = Module1.get_STAION()
+        lbZone.Text = zoneset
+        lbStation.Text = setstationid
         lbLotNum.Text = Module1.partlotno
         lbSnp.Text = Module1.partasnp
         lbProductDate.Text = Module1.partactualdate1

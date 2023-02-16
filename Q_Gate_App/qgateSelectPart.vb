@@ -10,8 +10,8 @@ Public Class qgateSelectPart
     Private Sub qgateSelectPart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         getpart()
         Timer1.Enabled = True
-        lbZone.Text = Module1.get_ZONE()
-        lbStation.Text = Module1.get_STAION()
+        lbZone.Text = zoneset
+        lbStation.Text = setstationid
         lbUserName.Text = Module1.num_user(0)
 
     End Sub

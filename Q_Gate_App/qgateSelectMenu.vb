@@ -73,7 +73,7 @@ Public Class qgateSelectMenu
 
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-        Dim type = Module1.get_TYPE
+
 
 
         shift = md.get_WorkShoftTime(DateTime.Now.ToString("HH:mm:ss"))
@@ -84,38 +84,41 @@ Public Class qgateSelectMenu
         workdate = DateTime.Now.ToString("yyyy-MM-dd")
 
         Dim checkDuringtime = md.get_During_Time(Trim(configposition), Trim(workdate), Trim(workshift))
-
-
+        MsgBox("configposition===> " & configposition)
+        MsgBox("workdate===> " & workdate)
+        MsgBox("num_user(0)===> " & num_user(0))
+        MsgBox("checkDuringtime===> " & checkDuringtime)
         If type = "1" Then
             If checkDuringtime = "0" Then
+
                 md.insert_during_time(configposition, workshift, workdate, num_user(0))
                 insertWorkerDuringTime()
                 updateDuringTime(lotdate, num_user(0), Trim(configposition), Trim(workdate), Trim(workshift))
-
+                qgateScanTag.Show()
+                Me.Hide()
 
             End If
-            qgateScanTag.Show()
-            Me.Hide()
+
         ElseIf type = "2" Then
             If checkDuringtime = "0" Then
 
                 md.insert_during_time(configposition, workshift, workdate, num_user(0))
                 insertWorkerDuringTime()
                 updateDuringTime(lotdate, num_user(0), Trim(configposition), Trim(workdate), Trim(workshift))
-
+                qgateScanTag.Show()
+                Me.Hide()
             End If
-            qgateScanTag.Show()
-            Me.Hide()
+
         ElseIf type = "3" Then
             If checkDuringtime = "0" Then
 
                 md.insert_during_time(configposition, workshift, workdate, num_user(0))
                 insertWorkerDuringTime()
                 updateDuringTime(lotdate, num_user(0), Trim(configposition), Trim(workdate), Trim(workshift))
-
+                qgateMenuStart.Show()
+                Me.Hide()
             End If
-            qgateMenuStart.Show()
-            Me.Hide()
+
         Else
             MsgBox("Please Select Position")
         End If
@@ -132,12 +135,10 @@ Public Class qgateSelectMenu
     End Sub
     Public Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim type = Module1.get_TYPE
-
 
         Timer1.Enabled = True
-        lbZone.Text = Module1.get_ZONE()
-        lbStation.Text = Module1.get_STAION()
+        lbZone.Text = zoneset
+        lbStation.Text = setstationid
 
         hidepicandname()
         lbZone.Select()

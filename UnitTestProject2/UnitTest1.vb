@@ -2,13 +2,13 @@
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 Imports Q_Gate_App
 <TestClass()> Public Class UnitTest1
-
     ''เทสการเข้าสู่ระบบ
     '<TestMethod()> Public Sub TestMethod1()
-    '    Dim obj As New qgateLogin
-    '    Dim rs As Boolean = obj.checkLogin("X0071")
-    '    MsgBox("rs===>" & rs)
-    '    Assert.AreNotEqual(False, rs)
+    ' Dim obj = New qgateLogin
+    ' MsgBox("11")
+    'Dim rs As Boolean = obj.checkLogin("X0070")
+    ' MsgBox("rs===>" & rs)
+    ' Assert.AreNotEqual(False, rs)
     'End Sub
     ''เทสการเข้าสู่ระบบ
 
@@ -120,13 +120,20 @@ Imports Q_Gate_App
 
     '<TestMethod()> Public Sub TestMethod5()
     '    Dim obj As New qgateOperation
-    'ถ้าเทส ต้อวใส่ในหน้า module
+    '    ถ้าเทส ต้อวใส่ในหน้า module
     'Public dmcqrscan As String = "SB01F40000001"
-    'Public tagfa As String = "GBK1M13720220104002SB025400004-B            20220105     6BA04                         2022010500251028"
-    'Public partnamedigit As String = "Bearing"
-    'Dim rs As Boolean = obj.substringqrproduct("SB01F40000001123121212140", "SB025400004-B")
+    '    Public tagfa As String = "GBK1M13720220104002SB025400004-B            20220105     6BA04                         2022010500251028"
+    '    Public partnamedigit As String = "Bearing"
+    '    Dim rs As Boolean = obj.substringqrproduct("SB01F40000001123121212140", "SB025400004-B")
     '    MsgBox("rs===>" & rs)
     '    Assert.AreNotEqual(False, rs)
     'End Sub
 
+
+    '<TestMethod()> Public Sub TestMethod6()
+    '    Dim obj As New qgateReprintTag
+    '    Dim rs As Boolean = obj.loadpartno("1", "2", "2023-02-13")
+    '    MsgBox("rs===>" & rs)
+    '    Assert.AreNotEqual(False, rs)
+    'End Sub
 End Class

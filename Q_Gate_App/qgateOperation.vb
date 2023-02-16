@@ -36,8 +36,8 @@ Public Class qgateOperation
         tbCounterNc.Text = productcountNC
         tbCounterNg.Text = productcountNG
         lbUserName.Text = Module1.num_user(0)
-        lbZone.Text = Module1.get_ZONE()
-        lbStation.Text = Module1.get_STAION()
+        lbZone.Text = zoneset
+        lbStation.Text = setstationid
         getpartno = Module1.qgate_part_no
         lbPartNum.Text = Module1.get_part()
         lbPartName.Text = Module1.get_partname()
@@ -111,45 +111,29 @@ Public Class qgateOperation
                 ' MsgBox("PartLineSub===>" & PartLineSub)
                 PartSerialNoSub = qrproduct.Substring(getpartsubend(4), getpartsubnum(5))
                 ' MsgBox("PartSerialNoSub===>" & PartSerialNoSub)
-
                 checkcodedmc(PartNoSub, partasnp, qrproduct)
-
-
-
-
             Else
                 tbQrSerial.Text = ""
                 MsgBox("QR Code ไม่ตรงกันจำนวนเลชไม่ตรง")
 
                 status = False
             End If
-
-
-
         Else
             tbQrSerial.Text = ""
             MsgBox("ไม่มี model")
-
             status = False
         End If
         Return status
     End Function
-
     Public Function checkcodedmc(qrdmc As String, productsnp As String, qralldmc As String)
-
         If CDbl(Val(Trim(productcount))) <> CDbl(Val(Trim(productsnp))) Then
-
             If qrdmc = Module1.dmcqrscan Then
-
-                If productcount = 0 Or s >= Module1.timetocheckqr Then 'ถ้าค่าเวลาที่เป็นมิลิวินาที
-
-
+                If productcount = 0 Or s >= timetocheckqr Then 'ถ้าค่าเวลาที่เป็นมิลิวินาที
                     shift = md.get_WorkShoftTime(DateTime.Now.ToString("HH:mm:ss"))
                     Dim dict8 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(shift)
                     For Each item As Object In dict8
                         workshiftid = item("mws_shift").ToString
                     Next
-
                     'Dim rsworkshift = md.get_IdWorkShift(shift)
                     Dim idtagfa = md.get_ID_Tag_fa(Module1.tagfa)
                     Dim idnamedigit = md.get_id_Digitname(partnamedigit)
@@ -166,10 +150,6 @@ Public Class qgateOperation
                         namedigitid = item("mdt_id").ToString
                     Next
                     Dim counttime As Integer = s
-
-
-
-
                     Dim checkduplicate = md.get_QrProduct(tbQrSerial.Text)
 
                     If checkduplicate = "0" Then

@@ -1,7 +1,7 @@
 ﻿Imports Nancy.Json
 Public Class qgateDefectNg
     Dim md As New ModelVB
-    Dim Type
+
     Dim defectcode As String
     Dim defectDetail As String
     Dim defect As String
@@ -14,10 +14,10 @@ Public Class qgateDefectNg
     Private Sub qgateDefectNg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         lbUserName.Text = Module1.num_user(0)
-        lbZone.Text = Module1.get_ZONE()
-        lbStation.Text = Module1.get_STAION()
-        Type = Module1.get_TYPE()
+        lbZone.Text = zoneset
+        lbStation.Text = setstationid
         Dim defect = md.get_DataDefect()
+        MsgBox("defect==> " & defect)
         Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(defect)
 
         For Each item As Object In dict3
@@ -86,7 +86,7 @@ Public Class qgateDefectNg
             For Each lvItem As ListViewItem In ListView1.SelectedItems
                 rs = ListView1.Items(lvItem.Index).SubItems(0).Text
             Next
-            defect = md.get_DataDefect(rs)
+            defect = md.get_DataDefectID(rs)
             Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(defect)
             For Each item As Object In dict3
                 Defectid = item("md_id").ToString
@@ -136,7 +136,7 @@ Public Class qgateDefectNg
             For Each lvItem As ListViewItem In ListView1.SelectedItems
                 rs = ListView1.Items(lvItem.Index).SubItems(0).Text
             Next
-            defect = md.get_DataDefect(rs)
+            defect = md.get_DataDefectID(rs)
             Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(defect)
             For Each item As Object In dict3
                 Defectid = item("md_id").ToString

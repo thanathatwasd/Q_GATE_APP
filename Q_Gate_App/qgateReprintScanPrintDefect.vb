@@ -15,9 +15,7 @@ Public Class qgateReprintScanPrintDefect
         lbStation.Text = setstationid
     End Sub
     Public Function getDataScanPrint(tagscan As String)
-
         Dim tag = md.get_Data_Scan_Print_Defect(tagscan)
-        MsgBox("tag===> " & tag)
         If tag <> "0" Then
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(tag)
             For Each item As Object In dict2
@@ -39,36 +37,31 @@ Public Class qgateReprintScanPrintDefect
             Next
 
         Else
+            Dim Tagqr = md.get_Tag_By_Qrproduct_Defect(tagscan)
+            If Tagqr <> "0" Then
+                Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Tagqr)
+                For Each item As Object In dict2
+                    tagcompleteid = item("iptd_id").ToString
+                    partno = item("ifts_part_no").ToString
+                    productsnp = item("ifts_snp").ToString
+                    boxnum = item("iptd_count_box").ToString
+                    lotcurrent = item("ifts_lot_current").ToString
+                    shift = item("iodc_shift").ToString
+                    checkdate = item("iptd_created_date").ToString
+                    lbPartNum.Text = partno
+                    lbQty.Text = productsnp
+                    lbBoxNum.Text = boxnum
+                    lbLotNum.Text = lotcurrent
+                    lbShift.Text = shift
+                    lbCheckDate.Text = checkdate
 
-
-            'Dim Tagqr = md.get_Tag_By_Qrproduct(tagscan)
-
-            'If Tagqr <> "0" Then
-            '    Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Tagqr)
-            '    For Each item As Object In dict2
-            '        tagcompleteid = item("iotc_id").ToString
-            '        partno = item("ifts_part_no").ToString
-            '        productsnp = item("ifts_snp").ToString
-            '        boxnum = item("ifts_box").ToString
-            '        lotcurrent = item("ifts_lot_current").ToString
-            '        shift = item("iodc_shift").ToString
-            '        checkdate = item("iotc_create_date").ToString
-            '        lbPartNum.Text = partno
-            '        lbQty.Text = productsnp
-            '        lbBoxNum.Text = boxnum
-            '        lbLotNum.Text = lotcurrent
-            '        lbShift.Text = shift
-            '        lbCheckDate.Text = checkdate
-
-            '        status = True
-            '    Next
-
-            'Else
-            MsgBox("ไม่พบ TAG ในวันนี้")
-            status = False
-            tbScanTag.Text = ""
-            'End If
-
+                    status = True
+                Next
+            Else
+                MsgBox("ไม่พบ TAG ในวันนี้")
+                status = False
+                tbScanTag.Text = ""
+            End If
         End If
         Return status
     End Function
@@ -76,9 +69,6 @@ Public Class qgateReprintScanPrintDefect
     Private Sub tbScanTag_KeyDown(sender As Object, e As KeyEventArgs) Handles tbScanTag.KeyDown
         If e.KeyCode = Keys.Enter Then
             If getDataScanPrint(tbScanTag.Text) Then
-                tbScanTag.Text = ""
-
-
             End If
         End If
     End Sub
@@ -91,8 +81,7 @@ Public Class qgateReprintScanPrintDefect
     Public Function btnprint()
         If tagcompleteid <> "0" Then
             MsgBox("ปริ้น Tag สำเร็จ")
-            'md.insert_log_reprint(tagcompleteid, num_user(0))
-
+            tbScanTag.Text = ""
             lbPartNum.Text = "-"
             lbQty.Text = "-"
             lbBoxNum.Text = "-"
@@ -107,6 +96,7 @@ Public Class qgateReprintScanPrintDefect
     End Function
 
     Private Sub pbClear_Click(sender As Object, e As EventArgs) Handles pbClear.Click
+        tbScanTag.Text = ""
         lbPartNum.Text = "-"
         lbQty.Text = "-"
         lbBoxNum.Text = "-"
@@ -116,11 +106,16 @@ Public Class qgateReprintScanPrintDefect
         lbCheckDate.Text = "-"
         tagcompleteid = "0"
     End Sub
-
-
-
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         qgateReprintDefect.Show()
         Me.Close()
     End Sub
+
+    Private Sub pbPrint_Click(sender As Object, e As EventArgs) Handles pbPrint.Click
+
+        md.insert_log_reprint(tagcompleteid, num_user(0))
+        btnprint()
+    End Sub
+
+
 End Class

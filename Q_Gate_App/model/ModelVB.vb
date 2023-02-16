@@ -293,7 +293,7 @@
 
     End Function
 
-    Public Function get_DataDefect(defectcode As String)
+    Public Function get_DataDefectID(defectcode As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getdefectID?defectcode=" & defectcode
@@ -638,6 +638,20 @@
     End Function
 
 
+    Public Function get_Tag_By_Qrproduct_Defect(qrproduct As String)
+
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getTagByQrProductDefect?qrproduct=" & qrproduct
+        Dim rs = Api.Load_data(URL)
+        'MsgBox(rs)
+        Return rs
+
+
+    End Function
+
+
+
 
     Public Function insert_log_reprint(tagconpleteid As String, empcode As String)
 
@@ -645,6 +659,18 @@
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertlogreprint?tagconpleteid=" & tagconpleteid & "&empcode=" & empcode
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+    End Function
+
+
+    Public Function insert_log_reprint_Defect(tagconpleteid As String, empcode As String)
+
+
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertlogreprintDefect?tagconpleteid=" & tagconpleteid & "&empcode=" & empcode
         Dim rs = Api.Load_data(URL)
 
         Return rs

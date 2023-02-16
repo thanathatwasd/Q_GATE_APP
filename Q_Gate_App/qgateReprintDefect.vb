@@ -112,9 +112,12 @@ Public Class qgateReprintDefect
     End Sub
     Private Sub pbPrint_Click(sender As Object, e As EventArgs) Handles pbPrint.Click
         Dim a = getid()
-        'md.insert_log_reprint(a, num_user(0))
+        MsgBox("a====> " & a)
+        md.insert_log_reprint(a, num_user(0))
         MsgBox("ปริ้น Tag สำเร็จ")
     End Sub
+
+
     Public Function getid()
         Dim rs As String = ""
         For Each lvItem As ListViewItem In lvDetail.SelectedItems
