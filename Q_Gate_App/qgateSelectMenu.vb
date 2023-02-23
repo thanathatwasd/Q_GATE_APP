@@ -29,7 +29,7 @@ Public Class qgateSelectMenu
     Dim menureprint = ""
     Dim menusorting = ""
     Dim round As Integer = 1
-    Dim lotdate = "CA19"
+    Dim lotdate As String
 
     Sub Main()
         Dim trd As New Thread(AddressOf ThreadTask)
@@ -96,7 +96,6 @@ Public Class qgateSelectMenu
                 updateDuringTime(lotdate, num_user(0), Trim(configposition), Trim(workdate), Trim(workshift))
                 qgateScanTag.Show()
                 Me.Hide()
-
             End If
 
         ElseIf type = "2" Then
@@ -107,7 +106,9 @@ Public Class qgateSelectMenu
                 updateDuringTime(lotdate, num_user(0), Trim(configposition), Trim(workdate), Trim(workshift))
                 qgateScanTag.Show()
                 Me.Hide()
+
             End If
+
 
         ElseIf type = "3" Then
             If checkDuringtime = "0" Then
@@ -117,6 +118,7 @@ Public Class qgateSelectMenu
                 updateDuringTime(lotdate, num_user(0), Trim(configposition), Trim(workdate), Trim(workshift))
                 qgateMenuStart.Show()
                 Me.Hide()
+
             End If
 
         Else
@@ -134,8 +136,8 @@ Public Class qgateSelectMenu
         MsgBox("Page not found")
     End Sub
     Public Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
+        lotdate = md.get_Lotcur(DateTime.Now.ToString("yyyy-MM-dd"))
+        'MsgBox("lotdate  ===> " & lotdate)
         Timer1.Enabled = True
         lbZone.Text = zoneset
         lbStation.Text = setstationid
@@ -148,6 +150,7 @@ Public Class qgateSelectMenu
         'loadpicUser(staffname)
         checkLogin(Label1.Text)
         getmenu(staffname)
+
 
 
 

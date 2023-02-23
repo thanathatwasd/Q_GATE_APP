@@ -38,7 +38,7 @@ Public Class qgateReprintScanPrint
                 tagcompleteid = item("iotc_id").ToString
                 partno = item("ifts_part_no").ToString
                 productsnp = item("ifts_snp").ToString
-                boxnum = item("ifts_box").ToString
+                boxnum = item("iotc_count_box").ToString
                 lotcurrent = item("ifts_lot_current").ToString
                 shift = item("iodc_shift").ToString
                 checkdate = item("iotc_create_date").ToString

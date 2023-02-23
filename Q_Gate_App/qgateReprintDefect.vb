@@ -11,6 +11,7 @@ Public Class qgateReprintDefect
         cbCalandar.Value = Date.Now
         cbCalandar.CustomFormat = "dd MMMM yyyy"
         res = Convert.ToDateTime(cbCalandar.Text).ToString("yyyy-MM-dd")
+        MsgBox("rss===> " & res)
         loadpartno(res)
 
     End Sub
@@ -35,8 +36,9 @@ Public Class qgateReprintDefect
 
     Public Function loadpartno(dodate As String)
         CbPartNum.Items.Clear()
-        res = Convert.ToDateTime(cbCalandar.Text).ToString("yyyy-MM-dd")
+
         Dim getphaseandzone = md.get_PartNoTo_Reprint_Defect(dodate)
+        MsgBox("getphaseandzone==> " & getphaseandzone)
         If getphaseandzone <> "0" Then
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(getphaseandzone)
             For Each item As Object In dict2
@@ -79,7 +81,7 @@ Public Class qgateReprintDefect
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(getBoxNo)
             For Each item As Object In dict2
                 Dim idtag = item("iptd_id").ToString
-                Dim partno = item("ifts_part_no").ToString
+                Dim partno = item("idc_partno").ToString
                 Dim lotCurrent = item("ifts_lot_current").ToString
                 Dim boxno = item("iptd_count_box").ToString
                 Dim list = New ListViewItem(idtag)

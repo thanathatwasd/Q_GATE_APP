@@ -34,42 +34,40 @@ Partial Class qgateAddUser
         'tbAddUser
         '
         Me.tbAddUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAddUser.Location = New System.Drawing.Point(145, 89)
-        Me.tbAddUser.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbAddUser.Location = New System.Drawing.Point(89, 57)
         Me.tbAddUser.Name = "tbAddUser"
-        Me.tbAddUser.Size = New System.Drawing.Size(349, 38)
+        Me.tbAddUser.Size = New System.Drawing.Size(292, 38)
         Me.tbAddUser.TabIndex = 1
         '
         'btnAddUser
         '
-        Me.btnAddUser.BackColor = System.Drawing.Color.Black
-        Me.btnAddUser.Location = New System.Drawing.Point(477, 207)
-        Me.btnAddUser.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAddUser.BackColor = System.Drawing.Color.Transparent
+        Me.btnAddUser.Location = New System.Drawing.Point(260, 126)
         Me.btnAddUser.Name = "btnAddUser"
-        Me.btnAddUser.Size = New System.Drawing.Size(133, 62)
+        Me.btnAddUser.Size = New System.Drawing.Size(84, 48)
         Me.btnAddUser.TabIndex = 2
         Me.btnAddUser.TabStop = False
         '
         'btnCancel
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(16, 207)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
+        Me.btnCancel.Location = New System.Drawing.Point(125, 126)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(133, 62)
+        Me.btnCancel.Size = New System.Drawing.Size(85, 48)
         Me.btnCancel.TabIndex = 0
         Me.btnCancel.TabStop = False
         '
         'qgateAddUser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(627, 283)
+        Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230220_4
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(470, 230)
         Me.Controls.Add(Me.btnAddUser)
         Me.Controls.Add(Me.tbAddUser)
         Me.Controls.Add(Me.btnCancel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "qgateAddUser"
         Me.Text = "qgateAddUser"
         CType(Me.btnAddUser, System.ComponentModel.ISupportInitialize).EndInit()

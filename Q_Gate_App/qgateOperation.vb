@@ -40,7 +40,7 @@ Public Class qgateOperation
         lbStation.Text = setstationid
         getpartno = Module1.qgate_part_no
         lbPartNum.Text = Module1.qgate_part_no
-        lbPartName.Text = Module1.get_partname()
+        lbPartName.Text = Module1.partnamedigit
         lbLotNum.Text = Module1.partlotno
         lbSnp.Text = Module1.partasnp
         lbProductDate.Text = Module1.partactualdate1
@@ -100,9 +100,11 @@ Public Class qgateOperation
 
                 Next
             Next
+
             If qrproduct.Length = getpartsubend(5) Then
+
                 PartNoSub = qrproduct.Substring(getpartsubstart(0), getpartsubnum(0))
-                'MsgBox("PartNoSu===>" & PartNoSub)
+
                 PartDateSub = qrproduct.Substring(getpartsubend(0), getpartsubnum(1))
                 ' MsgBox("PartDateSub" & PartDateSub)
                 PartLotSub = qrproduct.Substring(getpartsubend(1), getpartsubnum(2))
@@ -129,6 +131,8 @@ Public Class qgateOperation
     End Function
     Public Function checkcodedmc(qrdmc As String, productsnp As String, qralldmc As String)
         If CDbl(Val(Trim(productcount))) <> CDbl(Val(Trim(productsnp))) Then
+            'MsgBox("qrdmc===> " & qrdmc)
+            'MsgBox("Module1.dmcqrscan===> " & Module1.dmcqrscan)
             If qrdmc = Module1.dmcqrscan Then
                 If productcount = 0 Or s >= timetocheckqr Then 'ถ้าค่าเวลาที่เป็นมิลิวินาที
                     shift = md.get_WorkShoftTime(DateTime.Now.ToString("HH:mm:ss"))
@@ -147,6 +151,7 @@ Public Class qgateOperation
                     For Each item As Object In dict5
                         tagfaid = item("ifts_id").ToString
                         lotcurrent = item("ifts_lot_current").ToString
+                        lotproduct = item("ifts_lot_no_prod")
                     Next
                     Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(idnamedigit)
                     For Each item As Object In dict6
@@ -171,11 +176,11 @@ Public Class qgateOperation
                         productcheckcount = 1
 
 
-                        Module1.qrpro.Add(qralldmc)
-                        'MsgBox(Module1.qrpro(j))
-                        t &= Module1.qrpro(j) & vbCrLf
-                        'MsgBox("-" & t & "-")
-                        j += 1
+                        'Module1.qrpro.Add(qralldmc)
+                        ''MsgBox(Module1.qrpro(j))
+                        't &= Module1.qrpro(j) & vbCrLf
+                        ''MsgBox("-" & t & "-")
+                        'j += 1
 
 
 
@@ -237,12 +242,37 @@ Public Class qgateOperation
     End Function
 
     Private Sub btnFinish_Click(sender As Object, e As EventArgs) Handles btnFinish.Click
-        MsgBox(t)
-        Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & "001")))
-        md.insert_Tag_Qgate_complete(tagfaid, "001", "1", num_user(0), tagqgate)
+
+        'Module1.qrpro.Add(qralldmc)
+        ''MsgBox(Module1.qrpro(j))
+        't &= Module1.qrpro(j) & vbCrLf
+        ''MsgBox("-" & t & "-")
+        'j += 1
+
+
+        Dim allqrproduct = md.get_QRProductToGenQr(tagfaid)
+        'MsgBox("allqrproduct===> " & allqrproduct)
+        Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(allqrproduct)
+        For Each item As Object In dict6
+            Module1.qrpro = (item("iodc_id").ToString)
+            'MsgBox(Module1.qrpro(j))
+            t &= Module1.qrpro & " "
+            'MsgBox("-" & t & "-")
+
+            j += 1
+
+        Next
+        'MsgBox(t)
+
+
+
+
+
+        Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & Box_seq)))
+        md.insert_Tag_Qgate_complete(tagfaid, Box_seq, "1", num_user(0), tagqgate)
         productcount = 0
-        productcountNC = 0
-        productcountNG = 0
+
+        PrintTag.Set_parameter_print(partnotagfa, partnamedigit, "1", lotcur, Box_seq, partasnp, "1", "999", t, "001", "001", workshiftid, "01000", Locationpart, DateTime.Now.ToString("dd/MM/yyyy"), "1", lotproduct, partline, tagqgate)
         qgateScanTag.Show()
         Me.Close()
     End Sub
@@ -266,20 +296,43 @@ Public Class qgateOperation
 
             qgateDefectNg.Show()
             Me.Hide()
+
         Else
-            MsgBox("กรุณาตรวจสินค้าก่อน")
+            MsgBox("กรุณาตรวจสินค้าก่อน ")
         End If
+
 
     End Sub
 
     Private Sub btnNc_Click(sender As Object, e As EventArgs) Handles btnNc.Click
-        If qrproduct <> "" Then
+        If productcount >= 1 Then
             qgateDefectNc.lbNamedefect.Text = "PART NO : "
 
             qgateDefectNc.Show()
             Me.Hide()
         Else
-            MsgBox("กรุณาตรวจสินค้าก่อน")
+            MsgBox("กรุณาตรวจสินค้าก่อน ")
         End If
+
+
+    End Sub
+
+    Private Sub btnEnd_Click(sender As Object, e As EventArgs) Handles btnEnd.Click
+
+
+        'Dim getInfoDefectCountnc = md.get_Info_DefectCount(defectgroupnc, timenow)
+        'Dim getInfoDefectCountng = md.get_Info_DefectCount(defectgroupng, timenow)
+
+        md.update_Status_Defect_count(configposition, num_user(0))
+
+
+
+        'Dim tagdefect = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & boxdefect)))
+        'MsgBox("tagdefec====> " & tagdefect)
+        'productcountNC = 0
+        'productcountNG = 0
+        'boxdefect = boxdefect - 1
+
+
     End Sub
 End Class

@@ -137,7 +137,7 @@ Partial Class qgateReprintTag
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(628, 86)
+        Me.PictureBox2.Location = New System.Drawing.Point(631, 98)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(148, 65)
         Me.PictureBox2.TabIndex = 17
@@ -146,7 +146,7 @@ Partial Class qgateReprintTag
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(463, 86)
+        Me.PictureBox1.Location = New System.Drawing.Point(466, 98)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(149, 65)
         Me.PictureBox1.TabIndex = 16
@@ -155,7 +155,7 @@ Partial Class qgateReprintTag
         'pbPrint
         '
         Me.pbPrint.BackColor = System.Drawing.Color.Transparent
-        Me.pbPrint.Location = New System.Drawing.Point(628, 504)
+        Me.pbPrint.Location = New System.Drawing.Point(631, 516)
         Me.pbPrint.Name = "pbPrint"
         Me.pbPrint.Size = New System.Drawing.Size(148, 63)
         Me.pbPrint.TabIndex = 14
@@ -164,7 +164,7 @@ Partial Class qgateReprintTag
         'pbClear
         '
         Me.pbClear.BackColor = System.Drawing.Color.Transparent
-        Me.pbClear.Location = New System.Drawing.Point(463, 504)
+        Me.pbClear.Location = New System.Drawing.Point(466, 516)
         Me.pbClear.Name = "pbClear"
         Me.pbClear.Size = New System.Drawing.Size(149, 63)
         Me.pbClear.TabIndex = 13
@@ -173,7 +173,7 @@ Partial Class qgateReprintTag
         'pbBackReprintToMenu
         '
         Me.pbBackReprintToMenu.BackColor = System.Drawing.Color.Transparent
-        Me.pbBackReprintToMenu.Location = New System.Drawing.Point(25, 504)
+        Me.pbBackReprintToMenu.Location = New System.Drawing.Point(28, 516)
         Me.pbBackReprintToMenu.Name = "pbBackReprintToMenu"
         Me.pbBackReprintToMenu.Size = New System.Drawing.Size(149, 63)
         Me.pbBackReprintToMenu.TabIndex = 12
@@ -186,7 +186,7 @@ Partial Class qgateReprintTag
         Me.pnListPrint.Controls.Add(Me.cbCalandar)
         Me.pnListPrint.Controls.Add(Me.CbPartNum)
         Me.pnListPrint.Controls.Add(Me.CbLotNum)
-        Me.pnListPrint.Location = New System.Drawing.Point(25, 154)
+        Me.pnListPrint.Location = New System.Drawing.Point(28, 166)
         Me.pnListPrint.Name = "pnListPrint"
         Me.pnListPrint.Size = New System.Drawing.Size(751, 335)
         Me.pnListPrint.TabIndex = 15

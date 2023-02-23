@@ -30,6 +30,7 @@ Module Module1
     Public phaseplant As String = ""
     Public delUser = 0
     Public selectpic = 0
+    Public timenow
     Public staffid As Integer = 0
     Public staffid2 As Integer = 0
     Public staffid3 As Integer = 0
@@ -38,9 +39,12 @@ Module Module1
     Public substringname(5) As String
     Public partsubstart(5) As String
     Public partsubend(5) As String
-    Public qrpro As List(Of String) = New List(Of String)
+    Public qrpro As String
+    Public BoxNum As String = 0
+    Public Box_seq As String
     Public lotcur As String = ""
     Public partcodemaster As String = ""
+
     Public partline As String = ""
     Public partplandate As String = ""
     Public partseqplan As String = ""
@@ -57,6 +61,7 @@ Module Module1
     Public partnamedigit As String
     Public shift As String
     Public lotcurrent As String = ""
+    Public lotproduct As String = ""
     Public Macaddress
     Public dmcornondmc As String = ""
     Public productcount = 0
@@ -69,7 +74,8 @@ Module Module1
     Public duringtimeid
     Public timetocheckqr As String = ""
     Public qrproduct As String = ""
-
+    Public getpartname As String = ""
+    Public Defectgroupid As String
     Public adminconfig As String = ""
     Public phaseid As String = ""
     Public zoneid As String = ""
@@ -78,15 +84,15 @@ Module Module1
     Public setzoneid As String
     Public setstationid As String
     Public zoneset
-
+    Public boxdefect = 999
     Public type As String
-
-
-
+    Public defectnc As String
+    Public defectng As String
     Function getMacAddress()
-        Dim nics() As NetworkInterface =
-              NetworkInterface.GetAllNetworkInterfaces
+        Dim nics() As NetworkInterface = NetworkInterface.GetAllNetworkInterfaces
+
         Return nics(0).GetPhysicalAddress.ToString
+
     End Function
 
 
@@ -145,12 +151,7 @@ Module Module1
     End Function
     ''qgateselectpart
 
-    Public Sub set_partname(partname As String)
-        qgate_part_name = partname
-    End Sub
-    Public Function get_partname()
-        Return qgate_part_name
-    End Function
+
     Public Function userpack(ByVal Log As Integer)
         If Log = 1 Then
             qgateSelectMenu.pnuser1.Location = New Drawing.Point(-1, 3)

@@ -67,7 +67,6 @@ C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Q_Gate_App.exe.c
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Q_Gate_App.exe
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Q_Gate_App.pdb
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Q_Gate_App.xml
-C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Nancy.dll
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Newtonsoft.Json.dll
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\bin\Debug\Nancy.xml
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\obj\Debug\Q_Gate_App.PrintDefect.resources
@@ -98,3 +97,5 @@ C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\obj\Debug\Q_Gate_App.exe
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\obj\Debug\Q_Gate_App.xml
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\obj\Debug\Q_Gate_App.pdb
 C:\Users\thana\OneDrive\Desktop\Q_Gate_App\Q_Gate_App\obj\Debug\Q_Gate_App.vbproj.AssemblyReference.cache
+C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\obj\Debug\Q_Gate_App.PrintTag.resources
+C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\bin\Debug\MessagingToolkit.QRCode.dll

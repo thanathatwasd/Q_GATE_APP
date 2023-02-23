@@ -4,11 +4,11 @@ Imports Q_Gate_App
 <TestClass()> Public Class UnitTest1
     ''เทสการเข้าสู่ระบบ
     '<TestMethod()> Public Sub TestMethod1()
-    ' Dim obj = New qgateLogin
-    ' MsgBox("11")
-    'Dim rs As Boolean = obj.checkLogin("X0070")
-    ' MsgBox("rs===>" & rs)
-    ' Assert.AreNotEqual(False, rs)
+    '    Dim obj = New qgateLogin
+    '    MsgBox("11")
+    '    Dim rs As Boolean = obj.checkLogin("X0070")
+    '    MsgBox("rs===>" & rs)
+    '    Assert.AreNotEqual(False, rs)
     'End Sub
     ''เทสการเข้าสู่ระบบ
 
@@ -16,7 +16,7 @@ Imports Q_Gate_App
     '<TestMethod()> Public Sub TestMethod2()
     '    Dim obj As New qgateAddUser
     '    Dim rs As Boolean = obj.checkuser1("X0070")
-    '    MsgBox("rs===>" & rs)
+    '    Dim msgBoxResult = MsgBox("rs===>" & rs)
     '    Assert.AreNotEqual(False, rs)
     'End Sub
 
@@ -132,7 +132,7 @@ Imports Q_Gate_App
 
     '<TestMethod()> Public Sub TestMethod6()
     '    Dim obj As New qgateReprintTag
-    '    Dim rs As Boolean = obj.loadpartno("1", "2", "2023-02-13")
+    '    Dim rs As Boolean = obj.loadpartno("1", "2", "2023-02-20")
     '    MsgBox("rs===>" & rs)
     '    Assert.AreNotEqual(False, rs)
     'End Sub

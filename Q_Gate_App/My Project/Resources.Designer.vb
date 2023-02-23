@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _53962() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("53962", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property DefectNC() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DefectNC", resourceCulture)
@@ -133,6 +143,106 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_230220_4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_230220_4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_230220_41() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_230220_41", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_230222() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_230222", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_230222_0_removebg_preview_removebg_preview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_230222_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_230222_1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_230222_1_removebg_preview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert_and_button_230222_1-removebg-preview", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_2302221() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_2302221", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_2302222() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_2302222", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_2302223() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_2302223", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_Alert_and_button_2302224() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_Alert and button_2302224", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property LINE_ALBUM_หน้าจอ() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_หน้าจอ", resourceCulture)
@@ -156,6 +266,26 @@ Namespace My.Resources
         Friend ReadOnly Property LINE_ALBUM_หน้าจอ_Q_gate_230213() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_หน้าจอ Q-gate_230213", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_หน้าจอ_Q_gate_230222_0() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_หน้าจอ Q-gate_230222_0", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property LINE_ALBUM_หน้าจอ_Q_gate_230222_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("LINE_ALBUM_หน้าจอ Q-gate_230222_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -336,6 +466,16 @@ Namespace My.Resources
         Friend ReadOnly Property ScanTagFA1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ScanTagFA1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Screenshot_2023_02_22_175625() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Screenshot 2023-02-22 175625", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

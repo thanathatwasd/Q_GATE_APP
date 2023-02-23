@@ -6,18 +6,19 @@ Public Class qgateDefectNg
     Dim defectDetail As String
     Dim defect As String
     Dim Defectid As String
-    Dim Defectgroupid As String
+
     Dim productid As String
     Dim NG = "0"
     Dim tagid
     Dim flg_product
+
     Private Sub qgateDefectNg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         lbUserName.Text = Module1.num_user(0)
         lbZone.Text = zoneset
         lbStation.Text = setstationid
         Dim defect = md.get_DataDefect()
-        MsgBox("defect==> " & defect)
+        'MsgBox("defect==> " & defect)
         Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(defect)
 
         For Each item As Object In dict3
@@ -41,7 +42,8 @@ Public Class qgateDefectNg
 
 
         productid = md.get_ProductID(tagid)
-        'MsgBox("qrproductid===> " & qrproductid)
+
+
         Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(productid)
         For Each item As Object In dict6
             productid = item("iodc_id").ToString
@@ -105,16 +107,40 @@ Public Class qgateDefectNg
                 For Each item As Object In dict4
                     Defectgroupid = item("mdg_id").ToString
                 Next
-                MsgBox("Defectgroupid====> " & Defectgroupid)
-                MsgBox("productid====> " & productid)
-                MsgBox("NG====> " & NG)
-                MsgBox("num_user(0)====> " & num_user(0))
+                'MsgBox("Defectgroupid====> " & Defectgroupid)
+                'MsgBox("productid====> " & productid)
+                'MsgBox("NG====> " & NG)
+                'MsgBox("num_user(0)====> " & num_user(0))
                 Dim insertng = md.insert_Info_Defect(Defectgroupid, productid, NG, num_user(0))
+
+
+                Dim getdefectcount = md.get_DataDefectCount(configposition, timenow, NG)
+                'MsgBox("configposition===> " & configposition)
+                'MsgBox("timenow===> " & timenow)
+                'MsgBox("NG===> " & NG)
+                'MsgBox("getdefectcount===> " & getdefectcount)
+                If getdefectcount = "0" Then
+                    'MsgBox("111111111111111111")
+                    md.insert_info_part_count(configposition, NG, "1", num_user(0), Module1.qgate_part_no)
+
+
+                Else
+                    Dim defectcount
+                    Dim dict10 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(getdefectcount)
+                    For Each item As Object In dict10
+                        defectcount = item("idc_count").ToString
+                    Next
+                    defectcount += 1
+                    'MsgBox("defectcount===> " & defectcount)
+                    md.update_Defect_Count(configposition, defectcount, num_user(0), timenow, NG)
+                    ' MsgBox("2222222222222222222")
+                End If
+
                 qrproduct = ""
                 productcount = productcount - 1
                 productcountNG = productcountNG + 1
                 md.update_flg_product(productid)
-                j -= 1
+                'j -= 1
                 qgateOperation.Show()
                 qgateOperation.tbCounterNg.Text = productcountNG
                 qgateOperation.tbcounter.Text = productcount
@@ -147,11 +173,24 @@ Public Class qgateDefectNg
             For Each item As Object In dict4
                 Defectgroupid = item("mdg_id").ToString
             Next
-            MsgBox("Defectgroupid====> " & Defectgroupid)
-            MsgBox("productid====> " & productid)
-            MsgBox("NG====> " & NG)
-            MsgBox("num_user(0)====> " & num_user(0))
+
             Dim insertng = md.insert_Info_Defect(Defectgroupid, productid, NG, num_user(0))
+            Dim getdefectcount = md.get_DataDefectCount(Defectgroupid, timenow, NG)
+            If getdefectcount = "0" Then
+                'MsgBox("111111111111111111")
+                md.insert_info_part_count(Defectgroupid, NG, "1", num_user(0), Module1.qgate_part_no)
+            Else
+                Dim defectcount
+                Dim dict10 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(getdefectcount)
+                For Each item As Object In dict10
+                    defectcount = item("idc_count").ToString
+                Next
+                defectcount += 1
+                md.update_Defect_Count(Defectgroupid, defectcount, num_user(0), timenow, NG)
+                ' MsgBox("2222222222222222222")
+            End If
+
+
             qrproduct = ""
             productcount = productcount - 1
             productcountNG = productcountNG + 1

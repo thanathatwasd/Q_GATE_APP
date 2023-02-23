@@ -121,17 +121,23 @@
   <data name="Menu21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ScanTagFA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ScanTagFA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_Alert and button_230222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_230222.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ScanTagFA 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ScanTagFA 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_หน้าจอ Q-gate_230213" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230213.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_หน้าจอ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_หน้าจอ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScanTagFA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScanTagFA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Finish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Finish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +148,8 @@
   <data name="DefectNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefectNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DefectNG_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DefectNG_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_Alert and button_2302223" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_2302223.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ScanTagFA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScanTagFA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +175,35 @@
   <data name="Login_Admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login_Admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="53962" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\53962.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sample_User_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sample_User_Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Screenshot 2023-02-22 175625" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2023-02-22 175625.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_Alert and button_2302222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_2302222.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_Alert and button_230220_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_230220_41.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScanTagFA 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScanTagFA 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SettingStation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingStation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +211,11 @@
   <data name="DefectScanPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefectScanPrint.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Select Model1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Select Model1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_Alert and button_2302221" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_2302221.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_Alert and button_230222_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_230222_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,31 +226,40 @@
   <data name="Sample_User_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sample_User_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DefectNG_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefectNG_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Select Model" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Select Model.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="start1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LINE_ALBUM_หน้าจอ Q-gate_230213" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230213.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_Alert_and_button_230222_1-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert_and_button_230222_1-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="operationNotDMC_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\operationNotDMC_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Menu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Select Model1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Select Model1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sample_User_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sample_User_Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_Alert and button_2302224" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_2302224.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_Alert and button_230220_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert and button_230220_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LINE_ALBUM_หน้าจอ Q-gate_230211" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230211.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LINE_ALBUM_หน้าจอ Q-gate_230222_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230222_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OperationDMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OperationDMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LINE_ALBUM_หน้าจอ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LINE_ALBUM_หน้าจอ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LINE_ALBUM_หน้าจอ Q-gate_230222_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230222_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

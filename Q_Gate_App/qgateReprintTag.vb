@@ -36,7 +36,7 @@ Public Class qgateReprintTag
 
     Public Function loadpartno(phase As String, zone As String, dodate As String)
         CbPartNum.Items.Clear()
-        res = Convert.ToDateTime(cbCalandar.Text).ToString("yyyy-MM-dd")
+
         Dim getphaseandzone = md.get_PartNoTo_Reprint(phase, zone, dodate)
         If getphaseandzone <> "0" Then
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(getphaseandzone)
@@ -75,8 +75,9 @@ Public Class qgateReprintTag
         Return status
     End Function
 
-    Public Function loadlv(phase As String, zone As String, dodate As String, parnum As String, lotnum As String)
-        Dim getBoxNo = md.get_BoxNoTo_Reprint(phase, zone, dodate, parnum, lotnum)
+    Public Function loadlv(dodate As String, parnum As String, lotnum As String)
+        Dim getBoxNo = md.get_BoxNoTo_Reprint(dodate, parnum, lotnum)
+
         If getBoxNo <> "0" Then
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(getBoxNo)
             For Each item As Object In dict2
@@ -104,7 +105,7 @@ Public Class qgateReprintTag
     End Sub
     Private Sub CbLotNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbLotNum.SelectedIndexChanged
         lvDetail.Items.Clear()
-        loadlv(setphaseid, setzoneid, res, CbPartNum.SelectedItem, CbLotNum.SelectedItem)
+        loadlv(res, CbPartNum.SelectedItem, CbLotNum.SelectedItem)
     End Sub
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
         pnListPrint.Show()

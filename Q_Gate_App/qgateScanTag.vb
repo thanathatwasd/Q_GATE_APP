@@ -50,7 +50,7 @@ Public Class qgateScanTag
     Private Sub tbScanTag_KeyDown(sender As Object, e As KeyEventArgs) Handles tbScanTag.KeyDown
         If e.KeyCode = Keys.Enter Then
 
-            Dim timenow = (DateTime.Now.ToString("yyyy-MM-dd"))
+            timenow = (DateTime.Now.ToString("yyyy-MM-dd"))
             'MsgBox("timenow==> " & timenow)
             lotcur = md.get_Lotcur(timenow)
             'MsgBox("lotcur==> " & lotcur)
@@ -138,6 +138,17 @@ Public Class qgateScanTag
                         'MsgBox("partbox==>" & partbox)
                         Dim rsinserttagfa = md.insert_tag_fa(codemaster, scantag, partline, partplandate, partseqplan, partnotagfa, partactualdate1, partasnp,
                                                        partlotno, partactualdate2, partseqactual, partplant, partbox, lotcur)
+                        Module1.BoxNum += 1
+                        If BoxNum <= 9 Then
+                            Box_seq = "00" & BoxNum
+                        ElseIf BoxNum <= 99 Then
+                            Box_seq = "0" & BoxNum
+                        Else
+                            Box_seq = BoxNum
+                        End If
+
+
+
                         tbScanTag.Text = ""
                         Module1.tagfa = scantag
                         'MsgBox("dmc===>dmc")

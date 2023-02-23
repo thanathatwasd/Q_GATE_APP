@@ -7,6 +7,8 @@ Public Class qgateSelectPart
     Dim dmccheck As String
     Dim Locationpart As String
     Dim partname As String
+
+
     Private Sub qgateSelectPart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         getpart()
         Timer1.Enabled = True
@@ -97,11 +99,11 @@ Public Class qgateSelectPart
                 For Each item As Object In dict2
                     Dim modelpart = item("msp_part_name").ToString
                     Dim modelpartno = item("msp_part_no").ToString
-                    Module1.set_partname(modelpart)
+                    Module1.getpartname = modelpart
                     Module1.qgate_part_select = Trim(modelpart)
                     Module1.qgate_part_no = Trim(modelpartno)
                 Next
-                checkPartTag(Module1.qgate_part_no)
+                checkPartTag(qgate_part_no)
                 checkLogin()
                 infoselectpart()
                 qgateScanTag.Show()
@@ -118,24 +120,31 @@ Public Class qgateSelectPart
         Return status
     End Function
 
+
+
     Public Function checkPartTag(PartNoSub As String)
+        'MsgBox("PartNoSub==>  " & PartNoSub)
         Dim rsCheckUser = md.get_PartTagFA((PartNoSub))
-        Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(rsCheckUser)
-                For Each item As Object In dict2
-                    partno = item("mpn_part_no").ToString
-                    dmccheck = item("mpn_dmc_check").ToString
-                    Locationpart = item("mpn_location").ToString
-            partname = item("msp_part_name").ToString
+        If rsCheckUser <> "0" Then
+            Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(rsCheckUser)
+            For Each item As Object In dict2
+                partno = item("mpn_part_no").ToString
+                dmccheck = item("mpn_dmc_check").ToString
+                Locationpart = item("mpn_location").ToString
+                partname = item("msp_part_name").ToString
 
-        Next
-        Module1.dmcqrscan = dmccheck
-        Module1.Locationpart = Locationpart
-        Module1.partnamedigit = partname
-        ' MsgBox("partno===> " & partno)
-        ' MsgBox(" Module1.dmcqrscan = dmccheck===> " & Module1.dmcqrscan)
-        ' MsgBox(" Module1.partnamedigit = partname " & Module1.partnamedigit)
-        ' MsgBox("partno===> " & partno)
+            Next
+
+            Module1.dmcqrscan = dmccheck
+            MsgBox("Module1.dmcqrscan===> " & Module1.dmcqrscan)
+            Module1.Locationpart = Locationpart
+            Module1.partnamedigit = partname
+            ' MsgBox("partno===> " & partno)
+            ' MsgBox(" Module1.dmcqrscan = dmccheck===> " & Module1.dmcqrscan)
+            ' MsgBox(" Module1.partnamedigit = partname " & Module1.partnamedigit)
+            ' MsgBox("partno===> " & partno)
+        End If
+
     End Function
-
 
 End Class

@@ -33,37 +33,38 @@ Partial Class qgateconfirmLogout
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("MADE Dillan", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(38, 28)
+        Me.ComboBox1.Location = New System.Drawing.Point(89, 57)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(268, 43)
+        Me.ComboBox1.Size = New System.Drawing.Size(293, 39)
         Me.ComboBox1.TabIndex = 2
         '
         'chooseuserdelete
         '
         Me.chooseuserdelete.AutoSize = True
-        Me.chooseuserdelete.Location = New System.Drawing.Point(136, 97)
+        Me.chooseuserdelete.Location = New System.Drawing.Point(3, 208)
         Me.chooseuserdelete.Name = "chooseuserdelete"
         Me.chooseuserdelete.Size = New System.Drawing.Size(78, 13)
         Me.chooseuserdelete.TabIndex = 3
         Me.chooseuserdelete.Text = "lbSelectLogout"
+        Me.chooseuserdelete.Visible = False
         '
         'btnConfirm
         '
-        Me.btnConfirm.BackColor = System.Drawing.Color.Lime
-        Me.btnConfirm.Location = New System.Drawing.Point(242, 97)
+        Me.btnConfirm.BackColor = System.Drawing.Color.Transparent
+        Me.btnConfirm.Location = New System.Drawing.Point(127, 126)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(100, 50)
+        Me.btnConfirm.Size = New System.Drawing.Size(83, 45)
         Me.btnConfirm.TabIndex = 1
         Me.btnConfirm.TabStop = False
         '
         'pbCancel
         '
-        Me.pbCancel.BackColor = System.Drawing.Color.Red
-        Me.pbCancel.Location = New System.Drawing.Point(12, 97)
+        Me.pbCancel.BackColor = System.Drawing.Color.Transparent
+        Me.pbCancel.Location = New System.Drawing.Point(259, 126)
         Me.pbCancel.Name = "pbCancel"
-        Me.pbCancel.Size = New System.Drawing.Size(100, 50)
+        Me.pbCancel.Size = New System.Drawing.Size(87, 45)
         Me.pbCancel.TabIndex = 0
         Me.pbCancel.TabStop = False
         '
@@ -71,11 +72,14 @@ Partial Class qgateconfirmLogout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(354, 159)
+        Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230220_41
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(470, 230)
         Me.Controls.Add(Me.chooseuserdelete)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.pbCancel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "qgateconfirmLogout"
         Me.Text = "confirmLogout"
         CType(Me.btnConfirm, System.ComponentModel.ISupportInitialize).EndInit()

@@ -140,6 +140,11 @@ Public Class qgateOperationManual
         productcountNG = 0
         qgateScanTag.Show()
         Me.Close()
+
+
+
+
+
     End Sub
 
     Private Sub btnNg_Click(sender As Object, e As EventArgs) Handles btnNg.Click
@@ -163,5 +168,23 @@ Public Class qgateOperationManual
         Else
             MsgBox("กรุณาตรวจสินค้าก่อน")
         End If
+    End Sub
+
+    Private Sub btnEnd_Click(sender As Object, e As EventArgs) Handles btnEnd.Click
+
+        'Dim getInfoDefectCountnc = md.get_Info_DefectCount(defectgroupnc, timenow)
+        '    Dim getInfoDefectCountng = md.get_Info_DefectCount(defectgroupng, timenow)
+
+        'md.update_Status_Defect_count(defectnc, num_user(0))
+        'md.update_Status_Defect_count(defectng, num_user(0))
+
+
+        '    Dim tagdefect = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & boxdefect)))
+
+        '    productcountNC = 0
+        '    productcountNG = 0
+        '    boxdefect = boxdefect - 1
+
+
     End Sub
 End Class

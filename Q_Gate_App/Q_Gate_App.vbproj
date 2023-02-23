@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -63,6 +63,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\..\Downloads\New folder\New folder\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy">
       <HintPath>D:\vb project\Store\packages\Nancy.2.0.0\lib\net452\Nancy.dll</HintPath>
     </Reference>
@@ -101,6 +104,12 @@
       <DependentUpon>PrintDefect.vb</DependentUpon>
     </Compile>
     <Compile Include="PrintDefect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTag.Designer.vb">
+      <DependentUpon>PrintTag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTag.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="qgateconfirmLogout.Designer.vb">
@@ -240,6 +249,9 @@
   <ItemGroup>
     <EmbeddedResource Include="PrintDefect.resx">
       <DependentUpon>PrintDefect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTag.resx">
+      <DependentUpon>PrintTag.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="qgateconfirmLogout.resx">
       <DependentUpon>qgateconfirmLogout.vb</DependentUpon>
@@ -430,6 +442,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LINE_ALBUM_หน้าจอ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_230220_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_230220_41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_230222.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_2302221.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_2302222.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-02-22 175625.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_2302223.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53962.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_2302224.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert and button_230222_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert_and_button_230222_1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230222_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230222_1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
