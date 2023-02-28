@@ -1,14 +1,22 @@
 ﻿Imports Nancy.Json
 Public Class qgateReprintScanPrint
+    Dim status = False
     Dim md As New ModelVB
-    Dim partno As String
-    Dim productsnp As String
-    Dim boxnum As String
-    Dim lotcurrent As String
-    Dim shift As String
-    Dim checkdate As String
-    Dim status As Boolean = False
-    Dim tagcompleteid As String
+    Dim reprintpartno As String
+    Dim reprintpartname As String
+    Dim reprintsnp As String
+    Dim reprintcountbox As String
+    Dim reprintcheckdate As String
+    Dim reprintlotcurrent As String
+    Dim reprintlotproduct As String
+    Dim reprintshift As String
+    Dim reprintlinecd As String
+    Dim reprintphasename As String
+    Dim reprintlocation As String
+    Dim reprinttagqgate As String
+    Dim tagfaid As String
+    Dim qrproduct As String
+    Dim tagqgateid As String
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         qgateReprintTag.Show()
@@ -35,21 +43,36 @@ Public Class qgateReprintScanPrint
         If tag <> "0" Then
             Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(tag)
             For Each item As Object In dict2
-                tagcompleteid = item("iotc_id").ToString
-                partno = item("ifts_part_no").ToString
-                productsnp = item("ifts_snp").ToString
-                boxnum = item("iotc_count_box").ToString
-                lotcurrent = item("ifts_lot_current").ToString
-                shift = item("iodc_shift").ToString
-                checkdate = item("iotc_create_date").ToString
-                lbPartNum.Text = partno
-                lbQty.Text = productsnp
-                lbBoxNum.Text = boxnum
-                lbLotNum.Text = lotcurrent
-                lbShift.Text = shift
-                lbCheckDate.Text = checkdate
+                reprintpartno = item("ifts_part_no").ToString
+                reprintpartname = item("msp_part_name").ToString
+                reprintsnp = item("ifts_snp").ToString
+                reprintcountbox = item("iotc_count_box").ToString
+                reprintcheckdate = item("date_tag").ToString
+                reprintlotcurrent = item("ifts_lot_current").ToString
+                reprintlotproduct = item("ifts_lot_no_prod").ToString
+                reprintshift = item("iodc_shift").ToString
+                reprintlinecd = item("ifts_line_cd").ToString
+                reprintphasename = item("mpa_name").ToString
+                reprintlocation = item("mpn_location").ToString
+                reprinttagqgate = item("iotc_tag_qgate").ToString
+                tagfaid = item("ifts_id").ToString
+                tagqgateid = item("iotc_id").ToString
+                lbPartNum.Text = reprintpartno
+                lbQty.Text = reprintsnp
+                lbBoxNum.Text = reprintcountbox
+                lbLotNum.Text = reprintlotcurrent
+                lbShift.Text = reprintshift
+                lbCheckDate.Text = reprintcheckdate
 
                 status = True
+
+            Next
+            Dim allqrproduct = md.get_QRProductToGenQr(tagfaid)
+            'MsgBox("allqrproduct===> " & allqrproduct)
+            Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(allqrproduct)
+            For Each item As Object In dict6
+                Module1.qrpro = (item("iodc_id").ToString)
+                qrproduct &= Module1.qrpro & " "
             Next
 
         Else
@@ -57,21 +80,35 @@ Public Class qgateReprintScanPrint
             If Tagqr <> "0" Then
                 Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Tagqr)
                 For Each item As Object In dict2
-                    tagcompleteid = item("iotc_id").ToString
-                    partno = item("ifts_part_no").ToString
-                    productsnp = item("ifts_snp").ToString
-                    boxnum = item("ifts_box").ToString
-                    lotcurrent = item("ifts_lot_current").ToString
-                    shift = item("iodc_shift").ToString
-                    checkdate = item("iotc_create_date").ToString
-                    lbPartNum.Text = partno
-                    lbQty.Text = productsnp
-                    lbBoxNum.Text = boxnum
-                    lbLotNum.Text = lotcurrent
-                    lbShift.Text = shift
-                    lbCheckDate.Text = checkdate
+                    reprintpartno = item("ifts_part_no").ToString
+                    reprintpartname = item("msp_part_name").ToString
+                    reprintsnp = item("ifts_snp").ToString
+                    reprintcountbox = item("iotc_count_box").ToString
+                    reprintcheckdate = item("date_tag").ToString
+                    reprintlotcurrent = item("ifts_lot_current").ToString
+                    reprintlotproduct = item("ifts_lot_no_prod").ToString
+                    reprintshift = item("iodc_shift").ToString
+                    reprintlinecd = item("ifts_line_cd").ToString
+                    reprintphasename = item("mpa_name").ToString
+                    reprintlocation = item("mpn_location").ToString
+                    reprinttagqgate = item("iotc_tag_qgate").ToString
+                    tagfaid = item("ifts_id").ToString
+                    tagqgateid = item("iotc_id").ToString
+                    lbPartNum.Text = reprintpartno
+                    lbQty.Text = reprintsnp
+                    lbBoxNum.Text = reprintcountbox
+                    lbLotNum.Text = reprintlotcurrent
+                    lbShift.Text = reprintshift
+                    lbCheckDate.Text = reprintcheckdate
 
                     status = True
+                Next
+                Dim allqrproduct = md.get_QRProductToGenQr(tagfaid)
+                'MsgBox("allqrproduct===> " & allqrproduct)
+                Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(allqrproduct)
+                For Each item As Object In dict6
+                    Module1.qrpro = (item("iodc_id").ToString)
+                    qrproduct &= Module1.qrpro & " "
                 Next
             Else
                 MsgBox("ไม่พบ TAG ในวันนี้")
@@ -83,15 +120,16 @@ Public Class qgateReprintScanPrint
     End Function
 
     Private Sub pbPrint_Click(sender As Object, e As EventArgs) Handles pbPrint.Click
-        md.insert_log_reprint(tagcompleteid, num_user(0))
+        md.insert_log_reprint(tagqgateid, num_user(0))
+        PrintTag.Set_parameter_print(reprintpartno, reprintpartname, "1", reprintlotcurrent, reprintcountbox, reprintsnp, "1", "999", qrproduct, "001", "001", reprintshift, "01000", reprintlocation, reprintcheckdate, "1", reprintlotproduct, reprintlinecd, reprinttagqgate)
         btnprint()
     End Sub
 
     Public Function btnprint()
-        If tagcompleteid <> "0" Then
+        If tagqgateid <> "0" Then
             MsgBox("ปริ้น Tag สำเร็จ")
 
-            md.insert_log_reprint(tagcompleteid, num_user(0))
+            md.insert_log_reprint(tagqgateid, num_user(0))
             tbScanTag.Text = ""
             lbPartNum.Text = "-"
             lbQty.Text = "-"
@@ -100,9 +138,11 @@ Public Class qgateReprintScanPrint
             lbShift.Text = "-"
             lbCheckDate.Text = "-"
             lbCheckDate.Text = "-"
-            tagcompleteid = "0"
+            tagqgateid = "0"
+            qrproduct = ""
         Else
             MsgBox("กรุณาแสกน TAG Q-GATE")
+
         End If
     End Function
 
@@ -120,7 +160,7 @@ Public Class qgateReprintScanPrint
         lbShift.Text = "-"
         lbCheckDate.Text = "-"
         lbCheckDate.Text = "-"
-        tagcompleteid = "0"
+        tagqgateid = "0"
     End Sub
 
 End Class

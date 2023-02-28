@@ -49,7 +49,7 @@ Partial Class qgateReprintTag
         'lvDetail
         '
         Me.lvDetail.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.lvid, Me.lvPartNo, Me.lvLotNO, Me.lvBoxNo})
-        Me.lvDetail.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lvDetail.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvDetail.FullRowSelect = True
         Me.lvDetail.HideSelection = False
         Me.lvDetail.Location = New System.Drawing.Point(0, 59)
@@ -76,15 +76,15 @@ Partial Class qgateReprintTag
         'lvBoxNo
         '
         Me.lvBoxNo.Text = "BOX NO"
-        Me.lvBoxNo.Width = 125
+        Me.lvBoxNo.Width = 136
         '
         'cbCalandar
         '
         Me.cbCalandar.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cbCalandar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cbCalandar.Location = New System.Drawing.Point(67, 15)
+        Me.cbCalandar.Font = New System.Drawing.Font("MADE Dillan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbCalandar.Location = New System.Drawing.Point(68, 13)
         Me.cbCalandar.Name = "cbCalandar"
-        Me.cbCalandar.Size = New System.Drawing.Size(196, 26)
+        Me.cbCalandar.Size = New System.Drawing.Size(196, 29)
         Me.cbCalandar.TabIndex = 0
         Me.cbCalandar.Value = New Date(2023, 2, 10, 0, 0, 0, 0)
         '
@@ -92,47 +92,45 @@ Partial Class qgateReprintTag
         '
         Me.CbPartNum.BackColor = System.Drawing.Color.White
         Me.CbPartNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CbPartNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CbPartNum.Font = New System.Drawing.Font("MADE Dillan", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbPartNum.FormattingEnabled = True
-        Me.CbPartNum.Location = New System.Drawing.Point(369, 15)
+        Me.CbPartNum.Location = New System.Drawing.Point(369, 13)
         Me.CbPartNum.Name = "CbPartNum"
-        Me.CbPartNum.Size = New System.Drawing.Size(197, 28)
+        Me.CbPartNum.Size = New System.Drawing.Size(197, 29)
         Me.CbPartNum.TabIndex = 1
         '
         'CbLotNum
         '
         Me.CbLotNum.BackColor = System.Drawing.Color.White
         Me.CbLotNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CbLotNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CbLotNum.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbLotNum.FormattingEnabled = True
         Me.CbLotNum.Location = New System.Drawing.Point(661, 15)
         Me.CbLotNum.Name = "CbLotNum"
-        Me.CbLotNum.Size = New System.Drawing.Size(85, 28)
+        Me.CbLotNum.Size = New System.Drawing.Size(85, 30)
         Me.CbLotNum.TabIndex = 2
         '
         'lbStation
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(737, 34)
+        Me.lbStation.Location = New System.Drawing.Point(740, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(16, 24)
+        Me.lbStation.Size = New System.Drawing.Size(0, 22)
         Me.lbStation.TabIndex = 19
-        Me.lbStation.Text = "-"
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(464, 36)
+        Me.lbZone.Location = New System.Drawing.Point(464, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(16, 24)
+        Me.lbZone.Size = New System.Drawing.Size(0, 22)
         Me.lbZone.TabIndex = 18
-        Me.lbZone.Text = "-"
         '
         'PictureBox2
         '

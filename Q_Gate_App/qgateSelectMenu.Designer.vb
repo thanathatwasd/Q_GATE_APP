@@ -81,22 +81,22 @@ Partial Class qgateSelectMenu
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(462, 47)
+        Me.lbZone.Location = New System.Drawing.Point(464, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(0, 26)
+        Me.lbZone.Size = New System.Drawing.Size(0, 24)
         Me.lbZone.TabIndex = 2
         '
         'lbStation
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(737, 47)
+        Me.lbStation.Location = New System.Drawing.Point(739, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(0, 26)
+        Me.lbStation.Size = New System.Drawing.Size(0, 24)
         Me.lbStation.TabIndex = 3
         '
         'pblogout
@@ -135,6 +135,7 @@ Partial Class qgateSelectMenu
         Me.Panel1.Controls.Add(Me.pnuser4)
         Me.Panel1.Controls.Add(Me.pnuser3)
         Me.Panel1.Controls.Add(Me.pnuser2)
+        Me.Panel1.Font = New System.Drawing.Font("MADE Dillan", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(41, 154)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel1.Name = "Panel1"

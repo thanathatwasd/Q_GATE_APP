@@ -18,7 +18,7 @@
     Public Function get_LocalHost()
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         rsLocalhost = Api.Load_data("http://192.168.161.77/apiQgate/getdata/getLocalHost")
-       ' MsgBox("LOCALHOST ===> " & rsLocalhost)
+        'MsgBox("LOCALHOST ===> " & rsLocalhost)
         'MsgBox("rsLocalhost===> " & rsLocalhost)
         Return rsLocalhost
     End Function
@@ -305,6 +305,18 @@
 
 
     End Function
+
+
+    Public Function get_TagQgate(tagqgate As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getTagQgate?tagqgate=" & tagqgate
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+
+
+    End Function
     Public Function get_DataDefectGroup(stationid As String, defectid As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
@@ -332,7 +344,7 @@
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/GETLOT_TBKKFATHAILAND?timecur=" & timecur
         Dim rs = Api.Load_data(URL)
-
+        'MsgBox(rs)
         Return rs
 
 
@@ -660,6 +672,17 @@
 
     End Function
 
+
+    Public Function get_BoxNo_Lotcurrent(datecurrent As String, partno As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getBoxnoAndLot?datecurrent=" & datecurrent & "&partno=" & partno
+        Dim rs = Api.Load_data(URL)
+        'MsgBox("RS===>" & rs)
+        Return rs
+
+
+    End Function
 
     Public Function get_Data_Scan_Print_Defect(tagdefect As String)
 

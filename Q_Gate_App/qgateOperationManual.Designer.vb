@@ -69,27 +69,27 @@ Partial Class qgateOperationManual
         'pbPlus
         '
         Me.pbPlus.BackColor = System.Drawing.Color.Transparent
-        Me.pbPlus.Location = New System.Drawing.Point(452, 358)
+        Me.pbPlus.Location = New System.Drawing.Point(412, 375)
         Me.pbPlus.Name = "pbPlus"
-        Me.pbPlus.Size = New System.Drawing.Size(132, 103)
+        Me.pbPlus.Size = New System.Drawing.Size(149, 118)
         Me.pbPlus.TabIndex = 1
         Me.pbPlus.TabStop = False
         '
         'pbMinus
         '
         Me.pbMinus.BackColor = System.Drawing.Color.Transparent
-        Me.pbMinus.Location = New System.Drawing.Point(600, 358)
+        Me.pbMinus.Location = New System.Drawing.Point(581, 375)
         Me.pbMinus.Name = "pbMinus"
-        Me.pbMinus.Size = New System.Drawing.Size(132, 103)
+        Me.pbMinus.Size = New System.Drawing.Size(147, 118)
         Me.pbMinus.TabIndex = 2
         Me.pbMinus.TabStop = False
         '
         'tbCounter
         '
-        Me.tbCounter.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCounter.Location = New System.Drawing.Point(129, 375)
+        Me.tbCounter.Font = New System.Drawing.Font("MADE Dillan", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCounter.Location = New System.Drawing.Point(129, 373)
         Me.tbCounter.Name = "tbCounter"
-        Me.tbCounter.Size = New System.Drawing.Size(89, 39)
+        Me.tbCounter.Size = New System.Drawing.Size(89, 43)
         Me.tbCounter.TabIndex = 3
         '
         'Timer1
@@ -103,22 +103,23 @@ Partial Class qgateOperationManual
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Label1"
+        Me.Label1.Visible = False
         '
         'btnNc
         '
         Me.btnNc.BackColor = System.Drawing.Color.Transparent
-        Me.btnNc.Location = New System.Drawing.Point(411, 243)
+        Me.btnNc.Location = New System.Drawing.Point(361, 249)
         Me.btnNc.Name = "btnNc"
-        Me.btnNc.Size = New System.Drawing.Size(113, 75)
+        Me.btnNc.Size = New System.Drawing.Size(155, 94)
         Me.btnNc.TabIndex = 40
         Me.btnNc.TabStop = False
         '
         'btnNg
         '
         Me.btnNg.BackColor = System.Drawing.Color.Transparent
-        Me.btnNg.Location = New System.Drawing.Point(411, 126)
+        Me.btnNg.Location = New System.Drawing.Point(361, 116)
         Me.btnNg.Name = "btnNg"
-        Me.btnNg.Size = New System.Drawing.Size(113, 70)
+        Me.btnNg.Size = New System.Drawing.Size(155, 105)
         Me.btnNg.TabIndex = 39
         Me.btnNg.TabStop = False
         '
@@ -126,11 +127,11 @@ Partial Class qgateOperationManual
         '
         Me.lbBoxNumNc.AutoSize = True
         Me.lbBoxNumNc.BackColor = System.Drawing.Color.Transparent
-        Me.lbBoxNumNc.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbBoxNumNc.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBoxNumNc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbBoxNumNc.Location = New System.Drawing.Point(605, 287)
+        Me.lbBoxNumNc.Location = New System.Drawing.Point(602, 305)
         Me.lbBoxNumNc.Name = "lbBoxNumNc"
-        Me.lbBoxNumNc.Size = New System.Drawing.Size(19, 25)
+        Me.lbBoxNumNc.Size = New System.Drawing.Size(22, 26)
         Me.lbBoxNumNc.TabIndex = 37
         Me.lbBoxNumNc.Text = "-"
         '
@@ -138,11 +139,11 @@ Partial Class qgateOperationManual
         '
         Me.lbBoxNumNg.AutoSize = True
         Me.lbBoxNumNg.BackColor = System.Drawing.Color.Transparent
-        Me.lbBoxNumNg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbBoxNumNg.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBoxNumNg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbBoxNumNg.Location = New System.Drawing.Point(605, 169)
+        Me.lbBoxNumNg.Location = New System.Drawing.Point(600, 180)
         Me.lbBoxNumNg.Name = "lbBoxNumNg"
-        Me.lbBoxNumNg.Size = New System.Drawing.Size(19, 25)
+        Me.lbBoxNumNg.Size = New System.Drawing.Size(22, 26)
         Me.lbBoxNumNg.TabIndex = 35
         Me.lbBoxNumNg.Text = "-"
         '
@@ -150,33 +151,33 @@ Partial Class qgateOperationManual
         '
         Me.tbCounterNc.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCounterNc.Enabled = False
-        Me.tbCounterNc.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCounterNc.Font = New System.Drawing.Font("MADE Dillan", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCounterNc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbCounterNc.Location = New System.Drawing.Point(676, 249)
+        Me.tbCounterNc.Location = New System.Drawing.Point(671, 258)
         Me.tbCounterNc.Name = "tbCounterNc"
-        Me.tbCounterNc.Size = New System.Drawing.Size(84, 31)
+        Me.tbCounterNc.Size = New System.Drawing.Size(84, 39)
         Me.tbCounterNc.TabIndex = 32
         '
         'tbCounterNg
         '
         Me.tbCounterNg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCounterNg.Enabled = False
-        Me.tbCounterNg.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCounterNg.Font = New System.Drawing.Font("MADE Dillan", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCounterNg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbCounterNg.Location = New System.Drawing.Point(676, 130)
+        Me.tbCounterNg.Location = New System.Drawing.Point(671, 128)
         Me.tbCounterNg.Name = "tbCounterNg"
-        Me.tbCounterNg.Size = New System.Drawing.Size(84, 31)
+        Me.tbCounterNg.Size = New System.Drawing.Size(84, 39)
         Me.tbCounterNg.TabIndex = 31
         '
         'lbBoxNum
         '
         Me.lbBoxNum.AutoSize = True
         Me.lbBoxNum.BackColor = System.Drawing.Color.Transparent
-        Me.lbBoxNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbBoxNum.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBoxNum.ForeColor = System.Drawing.Color.White
         Me.lbBoxNum.Location = New System.Drawing.Point(105, 431)
         Me.lbBoxNum.Name = "lbBoxNum"
-        Me.lbBoxNum.Size = New System.Drawing.Size(19, 25)
+        Me.lbBoxNum.Size = New System.Drawing.Size(22, 26)
         Me.lbBoxNum.TabIndex = 29
         Me.lbBoxNum.Text = "-"
         '
@@ -184,11 +185,11 @@ Partial Class qgateOperationManual
         '
         Me.lbSnp.AutoSize = True
         Me.lbSnp.BackColor = System.Drawing.Color.Transparent
-        Me.lbSnp.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSnp.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbSnp.ForeColor = System.Drawing.Color.White
         Me.lbSnp.Location = New System.Drawing.Point(85, 331)
         Me.lbSnp.Name = "lbSnp"
-        Me.lbSnp.Size = New System.Drawing.Size(19, 25)
+        Me.lbSnp.Size = New System.Drawing.Size(22, 26)
         Me.lbSnp.TabIndex = 28
         Me.lbSnp.Text = "-"
         '
@@ -196,11 +197,11 @@ Partial Class qgateOperationManual
         '
         Me.lbLotNum.AutoSize = True
         Me.lbLotNum.BackColor = System.Drawing.Color.Transparent
-        Me.lbLotNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbLotNum.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbLotNum.ForeColor = System.Drawing.Color.White
         Me.lbLotNum.Location = New System.Drawing.Point(104, 293)
         Me.lbLotNum.Name = "lbLotNum"
-        Me.lbLotNum.Size = New System.Drawing.Size(19, 25)
+        Me.lbLotNum.Size = New System.Drawing.Size(22, 26)
         Me.lbLotNum.TabIndex = 27
         Me.lbLotNum.Text = "-"
         '
@@ -208,11 +209,11 @@ Partial Class qgateOperationManual
         '
         Me.lbModel.AutoSize = True
         Me.lbModel.BackColor = System.Drawing.Color.Transparent
-        Me.lbModel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbModel.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbModel.ForeColor = System.Drawing.Color.White
         Me.lbModel.Location = New System.Drawing.Point(103, 257)
         Me.lbModel.Name = "lbModel"
-        Me.lbModel.Size = New System.Drawing.Size(19, 25)
+        Me.lbModel.Size = New System.Drawing.Size(22, 26)
         Me.lbModel.TabIndex = 26
         Me.lbModel.Text = "-"
         '
@@ -220,11 +221,11 @@ Partial Class qgateOperationManual
         '
         Me.lbProductDate.AutoSize = True
         Me.lbProductDate.BackColor = System.Drawing.Color.Transparent
-        Me.lbProductDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbProductDate.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProductDate.ForeColor = System.Drawing.Color.White
         Me.lbProductDate.Location = New System.Drawing.Point(157, 220)
         Me.lbProductDate.Name = "lbProductDate"
-        Me.lbProductDate.Size = New System.Drawing.Size(19, 25)
+        Me.lbProductDate.Size = New System.Drawing.Size(22, 26)
         Me.lbProductDate.TabIndex = 25
         Me.lbProductDate.Text = "-"
         '
@@ -232,11 +233,11 @@ Partial Class qgateOperationManual
         '
         Me.lbPartName.AutoSize = True
         Me.lbPartName.BackColor = System.Drawing.Color.Transparent
-        Me.lbPartName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPartName.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPartName.ForeColor = System.Drawing.Color.White
         Me.lbPartName.Location = New System.Drawing.Point(135, 183)
         Me.lbPartName.Name = "lbPartName"
-        Me.lbPartName.Size = New System.Drawing.Size(19, 25)
+        Me.lbPartName.Size = New System.Drawing.Size(22, 26)
         Me.lbPartName.TabIndex = 24
         Me.lbPartName.Text = "-"
         '
@@ -244,11 +245,11 @@ Partial Class qgateOperationManual
         '
         Me.lbPartNum.AutoSize = True
         Me.lbPartNum.BackColor = System.Drawing.Color.Transparent
-        Me.lbPartNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPartNum.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPartNum.ForeColor = System.Drawing.Color.White
         Me.lbPartNum.Location = New System.Drawing.Point(110, 145)
         Me.lbPartNum.Name = "lbPartNum"
-        Me.lbPartNum.Size = New System.Drawing.Size(19, 25)
+        Me.lbPartNum.Size = New System.Drawing.Size(22, 26)
         Me.lbPartNum.TabIndex = 23
         Me.lbPartNum.Text = "-"
         '
@@ -256,49 +257,46 @@ Partial Class qgateOperationManual
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(409, 9)
+        Me.Label2.Location = New System.Drawing.Point(374, 17)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 25)
+        Me.Label2.Size = New System.Drawing.Size(67, 26)
         Me.Label2.TabIndex = 44
-        Me.Label2.Text = "User : "
+        Me.Label2.Text = "User :"
         '
         'lbUserName
         '
         Me.lbUserName.AutoSize = True
         Me.lbUserName.BackColor = System.Drawing.Color.Transparent
-        Me.lbUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbUserName.Location = New System.Drawing.Point(486, 9)
+        Me.lbUserName.Location = New System.Drawing.Point(441, 17)
         Me.lbUserName.Name = "lbUserName"
-        Me.lbUserName.Size = New System.Drawing.Size(19, 25)
+        Me.lbUserName.Size = New System.Drawing.Size(0, 26)
         Me.lbUserName.TabIndex = 43
-        Me.lbUserName.Text = "-"
         '
         'lbStation
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(741, 50)
+        Me.lbStation.Location = New System.Drawing.Point(735, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(16, 24)
+        Me.lbStation.Size = New System.Drawing.Size(0, 26)
         Me.lbStation.TabIndex = 42
-        Me.lbStation.Text = "-"
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(461, 50)
+        Me.lbZone.Location = New System.Drawing.Point(464, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(16, 24)
+        Me.lbZone.Size = New System.Drawing.Size(0, 26)
         Me.lbZone.TabIndex = 41
-        Me.lbZone.Text = "-"
         '
         'btnFinish
         '
@@ -323,7 +321,7 @@ Partial Class qgateOperationManual
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.operationNotDMC_0
+        Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_2302281
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.btnEnd)

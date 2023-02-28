@@ -35,7 +35,8 @@ Public Class qgateOperation
         tbcounter.Text = productcount
         tbCounterNc.Text = productcountNC
         tbCounterNg.Text = productcountNG
-        lbUserName.Text = Module1.num_user(0)
+        lbUserName.Text = user
+
         lbZone.Text = zoneset
         lbStation.Text = setstationid
         getpartno = Module1.qgate_part_no
@@ -44,8 +45,8 @@ Public Class qgateOperation
         lbLotNum.Text = Module1.partlotno
         lbSnp.Text = Module1.partasnp
         lbProductDate.Text = Module1.partactualdate1
-        lbBoxNum.Text = Module1.partbox
-
+        lbBoxNum.Text = BoxNum
+        lbCodeRank.Text = productrank
         Label5.Text = timetocheckqr
 
     End Sub
@@ -150,7 +151,7 @@ Public Class qgateOperation
                     Dim dict5 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(idtagfa)
                     For Each item As Object In dict5
                         tagfaid = item("ifts_id").ToString
-                        lotcurrent = item("ifts_lot_current").ToString
+
                         lotproduct = item("ifts_lot_no_prod")
                     Next
                     Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(idnamedigit)
@@ -172,7 +173,7 @@ Public Class qgateOperation
                         'MsgBox("qralldmc=====> " & qralldmc)
                         'MsgBox("num_user(0)=====> " & num_user(0))
                         'MsgBox("counttime=====> " & counttime)
-                        MsgBox("INSERT===>>>>>> ")
+                        'MsgBox("INSERT===>>>>>> ")
                         productcheckcount = 1
 
 
@@ -183,7 +184,7 @@ Public Class qgateOperation
                         'j += 1
 
 
-
+                        lbQrSerialNum.Text = qralldmc
                         Dim rscountProduct = md.insert_qr_product(tagfaid, configposition, namedigitid, workshiftid, productcount, productrank,
                         productcheckcount, qralldmc, num_user(0), counttime)
                         qrproduct = tbQrSerial.Text
@@ -201,12 +202,12 @@ Public Class qgateOperation
                             If flg = 0 Then
                                 productcheckcount = productcheckcount + 1
                                 productcount = productcount + 1
-
+                                lbQrSerialNum.Text = qralldmc
                                 Dim rscountProduct = md.update_info_part(tagfaid, configposition, workshiftid, productcount,
                         productcheckcount, num_user(0), qralldmc, counttime)
                                 s = 0
                                 tbcounter.Text = productcount
-                                MsgBox("update===>>>>>> ")
+                                'MsgBox("update===>>>>>> ")
                                 qrproduct = tbQrSerial.Text
                                 tbQrSerial.Text = ""
                                 status = True
@@ -265,10 +266,10 @@ Public Class qgateOperation
         'MsgBox(t)
 
 
+        'MsgBox("Box_seq====> " & Box_seq)
 
 
-
-        Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcurrent & "                         " & (DateTime.Now.ToString("yyyyMMdd") & "001" & phaseplant & Box_seq)))
+        Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & partasnp & lotcur & "                         " & (DateTime.Now.ToString("yyyyMMdd") & partseqplan & phaseplant & Box_seq)))
         md.insert_Tag_Qgate_complete(tagfaid, Box_seq, "1", num_user(0), tagqgate)
         productcount = 0
 
@@ -318,12 +319,13 @@ Public Class qgateOperation
     End Sub
 
     Private Sub btnEnd_Click(sender As Object, e As EventArgs) Handles btnEnd.Click
-
+        serialnc = ""
+        serialng = ""
 
         'Dim getInfoDefectCountnc = md.get_Info_DefectCount(defectgroupnc, timenow)
         'Dim getInfoDefectCountng = md.get_Info_DefectCount(defectgroupng, timenow)
 
-        md.update_Status_Defect_count(configposition, num_user(0))
+        'md.update_Status_Defect_count(configposition, num_user(0))
 
 
 

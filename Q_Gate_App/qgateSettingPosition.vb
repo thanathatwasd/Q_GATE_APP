@@ -33,7 +33,7 @@ Public Class qgateSettingPosition
 
     Public Function getStation()
         Dim rs = md.get_DataPhase()
-        MsgBox("rs==> " & rs)
+        'MsgBox("rs==> " & rs)
         status = False
 
         If rs <> "0" Then
@@ -60,9 +60,9 @@ Public Class qgateSettingPosition
 
         cbSelectZone.Items.Clear()
         cbSelectStation.Items.Clear()
-        MsgBox("SelectPhase==> " & SelectPhase)
+        'MsgBox("SelectPhase==> " & SelectPhase)
         Dim rs1 = md.get_DataZone(SelectPhase)
-        MsgBox("rs==> " & rs1)
+        'MsgBox("rs==> " & rs1)
         status = False
         If rs1 <> "0" Then
             status = True

@@ -29,9 +29,20 @@ Public Class PrintTag
         Model = LB_MODEL
         LOT_NO = LB_LOT
         LOT_PRODUCTION = lProd
+
         LINE = linepro
         QTY = LB_SNP
+
         BOX_NO = LB_COUNTBOX
+
+
+        If BOX_NO <= 9 Then
+            box_seq = "00" & BOX_NO
+        ElseIf BoxNum <= 99 Then
+            box_seq = "0" & BOX_NO
+        Else
+            box_seq = BOX_NO
+        End If
         'Dim year As String = LB_Hide_QR_FA_SCAN.Substring(8, 4)
         ' Dim mouth As String = LB_Hide_QR_FA_SCAN.Substring(12, 2)
         'Dim day As String = LB_Hide_QR_FA_SCAN.Substring(14, 2)
@@ -61,15 +72,9 @@ Public Class PrintTag
         'LINE = LB_Hide_QR_FA_SCAN.Substring(2, 6)
         CHECK_DATE = "NO_DATA"
         'NEW_QR = LB_Hide_QR_FA_SCAN.Substring(0, 100)
-        If BOX_NO <= 9 Then
-            box_seq = "00" & BOX_NO
-        ElseIf BOX_NO <= 99 Then
-            box_seq = "0" & BOX_NO
-        Else
-            box_seq = BOX_NO
-        End If
 
-        qrtagqgate = tagqgate & box_seq
+
+        qrtagqgate = tagqgate
 
         Dim tem_qr As String = NEW_QR & box_seq
         'new_gen_qr = tem_qr.Substring(0, 58) & LOT_NO & tem_qr.Substring(62, 25) & covert_date(date_check) & tem_qr.Substring(95)
@@ -81,6 +86,11 @@ Public Class PrintTag
         PrintPreviewDialog1.ShowDialog()
         'PrintDocument1.Print()
     End Sub
+
+
+
+
+
 
 
 

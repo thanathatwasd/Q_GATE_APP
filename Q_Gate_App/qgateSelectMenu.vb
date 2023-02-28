@@ -88,6 +88,19 @@ Public Class qgateSelectMenu
         'MsgBox("workdate===> " & workdate)
         'MsgBox("num_user(0)===> " & num_user(0))
         'MsgBox("checkDuringtime===> " & checkDuringtime)
+        user &= Module1.num_user(0)
+        If Module1.num_user(1) <> "" Then
+            user &= "," & Module1.num_user(1)
+        End If
+        If Module1.num_user(2) <> "" Then
+            user &= "," & Module1.num_user(2)
+        End If
+        If Module1.num_user(3) <> "" Then
+            user &= "," & Module1.num_user(3)
+        End If
+        If Module1.num_user(4) <> "" Then
+            user &= "," & Module1.num_user(4)
+        End If
         If type = "1" Then
             If checkDuringtime = "0" Then
 
@@ -233,7 +246,7 @@ Public Class qgateSelectMenu
             staffid = item("ss_id").ToString
             staffname = item("ss_emp_code").ToString
             staffper = item("ss_emp_name").ToString
-            staffpic = item("ss_pic").ToString
+
         Next
 
 

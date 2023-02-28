@@ -22,6 +22,11 @@ Q_Gate_App
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Q_Gate_App.My.Resources.Resources._53962">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Q_Gate_App.My.Resources.Resources.DefectNC">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -67,6 +72,46 @@ Q_Gate_App
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230222">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230222_0_removebg_preview_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230222_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230222_1_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_2302221">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_2302222">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_2302223">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_2302224">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -78,6 +123,41 @@ Q_Gate_App
 </summary>
 </member>
 <member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230213">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230222_0">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230222_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230224">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230224_0">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230224_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230228">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_2302281">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -168,6 +248,11 @@ Q_Gate_App
 </summary>
 </member>
 <member name="P:Q_Gate_App.My.Resources.Resources.ScanTagFA1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.Screenshot_2023_02_22_175625">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

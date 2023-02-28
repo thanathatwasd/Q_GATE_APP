@@ -108,5 +108,8 @@
         Me.Close()
     End Function
 
+    Private Sub pbCancel_Click(sender As Object, e As EventArgs) Handles pbCancel.Click
+        Me.Close()
 
+    End Sub
 End Class

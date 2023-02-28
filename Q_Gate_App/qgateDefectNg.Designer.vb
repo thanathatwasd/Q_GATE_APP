@@ -42,11 +42,11 @@ Partial Class qgateDefectNg
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(395, 9)
+        Me.Label2.Location = New System.Drawing.Point(357, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 25)
+        Me.Label2.Size = New System.Drawing.Size(76, 26)
         Me.Label2.TabIndex = 48
         Me.Label2.Text = "User : "
         '
@@ -54,37 +54,34 @@ Partial Class qgateDefectNg
         '
         Me.lbUserName.AutoSize = True
         Me.lbUserName.BackColor = System.Drawing.Color.Transparent
-        Me.lbUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbUserName.Location = New System.Drawing.Point(472, 9)
+        Me.lbUserName.Location = New System.Drawing.Point(430, 12)
         Me.lbUserName.Name = "lbUserName"
-        Me.lbUserName.Size = New System.Drawing.Size(19, 25)
+        Me.lbUserName.Size = New System.Drawing.Size(0, 26)
         Me.lbUserName.TabIndex = 47
-        Me.lbUserName.Text = "-"
         '
         'lbStation
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(722, 43)
+        Me.lbStation.Location = New System.Drawing.Point(741, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(16, 24)
+        Me.lbStation.Size = New System.Drawing.Size(0, 26)
         Me.lbStation.TabIndex = 46
-        Me.lbStation.Text = "-"
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(456, 43)
+        Me.lbZone.Location = New System.Drawing.Point(464, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(16, 24)
+        Me.lbZone.Size = New System.Drawing.Size(0, 26)
         Me.lbZone.TabIndex = 45
-        Me.lbZone.Text = "-"
         '
         'lvDefectCode
         '
@@ -94,18 +91,18 @@ Partial Class qgateDefectNg
         'lvDefectDetail
         '
         Me.lvDefectDetail.Text = "Defect Detail"
-        Me.lvDefectDetail.Width = 540
+        Me.lvDefectDetail.Width = 557
         '
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.lvDefectCode, Me.lvDefectDetail})
-        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(28, 151)
+        Me.ListView1.Location = New System.Drawing.Point(28, 163)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(726, 311)
+        Me.ListView1.Size = New System.Drawing.Size(742, 332)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -113,18 +110,18 @@ Partial Class qgateDefectNg
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(30, 483)
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 517)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(146, 59)
+        Me.PictureBox1.Size = New System.Drawing.Size(151, 63)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(609, 483)
+        Me.PictureBox2.Location = New System.Drawing.Point(625, 517)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(145, 59)
+        Me.PictureBox2.Size = New System.Drawing.Size(145, 63)
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
         '
@@ -132,30 +129,30 @@ Partial Class qgateDefectNg
         '
         Me.lbNamedefect.AutoSize = True
         Me.lbNamedefect.BackColor = System.Drawing.Color.Transparent
-        Me.lbNamedefect.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNamedefect.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbNamedefect.ForeColor = System.Drawing.Color.White
-        Me.lbNamedefect.Location = New System.Drawing.Point(29, 103)
+        Me.lbNamedefect.Location = New System.Drawing.Point(28, 114)
         Me.lbNamedefect.Name = "lbNamedefect"
-        Me.lbNamedefect.Size = New System.Drawing.Size(19, 25)
+        Me.lbNamedefect.Size = New System.Drawing.Size(22, 26)
         Me.lbNamedefect.TabIndex = 4
         Me.lbNamedefect.Text = "-"
         '
         'tbPartNo
         '
-        Me.tbPartNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbPartNo.Location = New System.Drawing.Point(157, 100)
+        Me.tbPartNo.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbPartNo.Location = New System.Drawing.Point(156, 111)
         Me.tbPartNo.Name = "tbPartNo"
-        Me.tbPartNo.Size = New System.Drawing.Size(325, 32)
+        Me.tbPartNo.Size = New System.Drawing.Size(325, 34)
         Me.tbPartNo.TabIndex = 49
         '
         'CbNumProduct
         '
         Me.CbNumProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CbNumProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbNumProduct.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbNumProduct.FormattingEnabled = True
-        Me.CbNumProduct.Location = New System.Drawing.Point(157, 99)
+        Me.CbNumProduct.Location = New System.Drawing.Point(156, 110)
         Me.CbNumProduct.Name = "CbNumProduct"
-        Me.CbNumProduct.Size = New System.Drawing.Size(175, 33)
+        Me.CbNumProduct.Size = New System.Drawing.Size(175, 34)
         Me.CbNumProduct.TabIndex = 50
         '
         'qgateDefectNg
@@ -164,7 +161,7 @@ Partial Class qgateDefectNg
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230222_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.CbNumProduct)
         Me.Controls.Add(Me.tbPartNo)
         Me.Controls.Add(Me.Label2)

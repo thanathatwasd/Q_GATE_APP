@@ -36,7 +36,7 @@ Partial Class qgateLogin
         'tbLoginUser
         '
         Me.tbLoginUser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tbLoginUser.Font = New System.Drawing.Font("MADE Dillan", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbLoginUser.Font = New System.Drawing.Font("MADE Dillan", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbLoginUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
         Me.tbLoginUser.Location = New System.Drawing.Point(134, 380)
         Me.tbLoginUser.Name = "tbLoginUser"

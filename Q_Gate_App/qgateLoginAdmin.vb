@@ -64,7 +64,16 @@ Public Class qgateLoginAdmin
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    Private Sub tbLoginAdmin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbLoginAdmin.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+
+        End Select
     End Sub
 End Class

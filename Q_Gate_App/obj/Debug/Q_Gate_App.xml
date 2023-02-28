@@ -137,6 +137,31 @@ Q_Gate_App
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230224">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230224_0">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230224_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230228">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_2302281">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Q_Gate_App.My.Resources.Resources.Login">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

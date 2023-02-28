@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -484,6 +484,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230222_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230224_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230224_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230224.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230228.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_2302281.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

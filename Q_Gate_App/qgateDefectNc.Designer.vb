@@ -27,13 +27,13 @@ Partial Class qgateDefectNc
         Me.lvDefectDetail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbUserName = New System.Windows.Forms.Label()
         Me.lbStation = New System.Windows.Forms.Label()
         Me.lbZone = New System.Windows.Forms.Label()
         Me.CbNumProduct = New System.Windows.Forms.ComboBox()
         Me.tbPartNo = New System.Windows.Forms.TextBox()
         Me.lbNamedefect = New System.Windows.Forms.Label()
+        Me.lbUserName = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,13 +41,13 @@ Partial Class qgateDefectNc
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.lvDefectCode, Me.lvDefectDetail})
-        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(29, 151)
+        Me.ListView1.Location = New System.Drawing.Point(29, 161)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(726, 313)
+        Me.ListView1.Size = New System.Drawing.Size(742, 337)
         Me.ListView1.TabIndex = 5
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -60,100 +60,97 @@ Partial Class qgateDefectNc
         'lvDefectDetail
         '
         Me.lvDefectDetail.Text = "Defect Detail"
-        Me.lvDefectDetail.Width = 555
+        Me.lvDefectDetail.Width = 571
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(609, 481)
+        Me.PictureBox2.Location = New System.Drawing.Point(622, 514)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(146, 64)
+        Me.PictureBox2.Size = New System.Drawing.Size(154, 67)
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(29, 481)
+        Me.PictureBox1.Location = New System.Drawing.Point(29, 514)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(146, 64)
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 67)
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(392, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 25)
-        Me.Label2.TabIndex = 48
-        Me.Label2.Text = "User : "
-        '
-        'lbUserName
-        '
-        Me.lbUserName.AutoSize = True
-        Me.lbUserName.BackColor = System.Drawing.Color.Transparent
-        Me.lbUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbUserName.Location = New System.Drawing.Point(469, 9)
-        Me.lbUserName.Name = "lbUserName"
-        Me.lbUserName.Size = New System.Drawing.Size(19, 25)
-        Me.lbUserName.TabIndex = 47
-        Me.lbUserName.Text = "-"
         '
         'lbStation
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(727, 44)
+        Me.lbStation.Location = New System.Drawing.Point(741, 47)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(16, 24)
+        Me.lbStation.Size = New System.Drawing.Size(0, 26)
         Me.lbStation.TabIndex = 46
-        Me.lbStation.Text = "-"
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(456, 44)
+        Me.lbZone.Location = New System.Drawing.Point(462, 47)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(16, 24)
+        Me.lbZone.Size = New System.Drawing.Size(0, 26)
         Me.lbZone.TabIndex = 45
-        Me.lbZone.Text = "-"
         '
         'CbNumProduct
         '
-        Me.CbNumProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbNumProduct.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbNumProduct.FormattingEnabled = True
-        Me.CbNumProduct.Location = New System.Drawing.Point(157, 99)
+        Me.CbNumProduct.Location = New System.Drawing.Point(159, 105)
         Me.CbNumProduct.Name = "CbNumProduct"
-        Me.CbNumProduct.Size = New System.Drawing.Size(184, 33)
+        Me.CbNumProduct.Size = New System.Drawing.Size(184, 34)
         Me.CbNumProduct.TabIndex = 53
         '
         'tbPartNo
         '
-        Me.tbPartNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbPartNo.Location = New System.Drawing.Point(157, 100)
+        Me.tbPartNo.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbPartNo.Location = New System.Drawing.Point(159, 106)
         Me.tbPartNo.Name = "tbPartNo"
-        Me.tbPartNo.Size = New System.Drawing.Size(334, 32)
+        Me.tbPartNo.Size = New System.Drawing.Size(334, 34)
         Me.tbPartNo.TabIndex = 52
         '
         'lbNamedefect
         '
         Me.lbNamedefect.AutoSize = True
-        Me.lbNamedefect.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNamedefect.Location = New System.Drawing.Point(28, 102)
+        Me.lbNamedefect.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNamedefect.Location = New System.Drawing.Point(30, 108)
         Me.lbNamedefect.Name = "lbNamedefect"
-        Me.lbNamedefect.Size = New System.Drawing.Size(23, 31)
+        Me.lbNamedefect.Size = New System.Drawing.Size(22, 26)
         Me.lbNamedefect.TabIndex = 51
         Me.lbNamedefect.Text = "-"
+        '
+        'lbUserName
+        '
+        Me.lbUserName.AutoSize = True
+        Me.lbUserName.BackColor = System.Drawing.Color.Transparent
+        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.lbUserName.Location = New System.Drawing.Point(430, 12)
+        Me.lbUserName.Name = "lbUserName"
+        Me.lbUserName.Size = New System.Drawing.Size(0, 26)
+        Me.lbUserName.TabIndex = 47
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(357, 12)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(71, 26)
+        Me.Label2.TabIndex = 48
+        Me.Label2.Text = "User :"
         '
         'qgateDefectNc
         '
@@ -161,7 +158,7 @@ Partial Class qgateDefectNc
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230222_0
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.CbNumProduct)
         Me.Controls.Add(Me.tbPartNo)
         Me.Controls.Add(Me.lbNamedefect)
@@ -187,11 +184,11 @@ Partial Class qgateDefectNc
     Friend WithEvents ListView1 As ListView
     Friend WithEvents lvDefectCode As ColumnHeader
     Friend WithEvents lvDefectDetail As ColumnHeader
-    Friend WithEvents Label2 As Label
-    Friend WithEvents lbUserName As Label
     Friend WithEvents lbStation As Label
     Friend WithEvents lbZone As Label
     Friend WithEvents CbNumProduct As ComboBox
     Friend WithEvents tbPartNo As TextBox
     Friend WithEvents lbNamedefect As Label
+    Friend WithEvents lbUserName As Label
+    Friend WithEvents Label2 As Label
 End Class

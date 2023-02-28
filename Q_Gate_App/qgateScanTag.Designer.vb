@@ -62,9 +62,9 @@ Partial Class qgateScanTag
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_Alert_and_button_230222_0_removebg_preview_removebg_preview
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(632, 509)
+        Me.PictureBox1.Location = New System.Drawing.Point(624, 518)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(156, 79)
+        Me.PictureBox1.Size = New System.Drawing.Size(164, 79)
         Me.PictureBox1.TabIndex = 49
         Me.PictureBox1.TabStop = False
         '
@@ -72,25 +72,25 @@ Partial Class qgateScanTag
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(425, 9)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label2.Location = New System.Drawing.Point(357, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 25)
+        Me.Label2.Size = New System.Drawing.Size(66, 24)
         Me.Label2.TabIndex = 48
-        Me.Label2.Text = "User : "
+        Me.Label2.Text = "User :"
         '
         'lbUserName
         '
         Me.lbUserName.AutoSize = True
         Me.lbUserName.BackColor = System.Drawing.Color.Transparent
-        Me.lbUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbUserName.Location = New System.Drawing.Point(502, 9)
+        Me.lbUserName.Location = New System.Drawing.Point(430, 12)
         Me.lbUserName.Name = "lbUserName"
-        Me.lbUserName.Size = New System.Drawing.Size(19, 25)
+        Me.lbUserName.Size = New System.Drawing.Size(0, 24)
         Me.lbUserName.TabIndex = 47
-        Me.lbUserName.Text = "-"
         '
         'lbpart
         '
@@ -115,34 +115,33 @@ Partial Class qgateScanTag
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(751, 47)
+        Me.lbStation.Location = New System.Drawing.Point(749, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(0, 25)
+        Me.lbStation.Size = New System.Drawing.Size(0, 24)
         Me.lbStation.TabIndex = 3
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(466, 47)
+        Me.lbZone.Location = New System.Drawing.Point(463, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(17, 25)
+        Me.lbZone.Size = New System.Drawing.Size(0, 24)
         Me.lbZone.TabIndex = 2
-        Me.lbZone.Text = " "
         '
         'tbScanTag
         '
         Me.tbScanTag.BackColor = System.Drawing.Color.White
         Me.tbScanTag.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tbScanTag.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbScanTag.Font = New System.Drawing.Font("MADE Dillan", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbScanTag.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.tbScanTag.Location = New System.Drawing.Point(121, 304)
+        Me.tbScanTag.Location = New System.Drawing.Point(121, 307)
         Me.tbScanTag.Name = "tbScanTag"
-        Me.tbScanTag.Size = New System.Drawing.Size(287, 38)
+        Me.tbScanTag.Size = New System.Drawing.Size(287, 36)
         Me.tbScanTag.TabIndex = 0
         '
         'pbSelectModel

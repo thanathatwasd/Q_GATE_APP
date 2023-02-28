@@ -44,8 +44,12 @@ Module Module1
     Public Box_seq As String
     Public lotcur As String = ""
     Public partcodemaster As String = ""
-
+    Public lotcu
     Public partline As String = ""
+    Public user As String = ""
+    Public serialnc As String = ""
+    Public serialng As String = ""
+    Public boxnumdefect As String = ""
     Public partplandate As String = ""
     Public partseqplan As String = ""
     Public partnotagfa As String = ""
@@ -88,6 +92,7 @@ Module Module1
     Public type As String
     Public defectnc As String
     Public defectng As String
+    Public timetomorrow
     Function getMacAddress()
         Dim nics() As NetworkInterface = NetworkInterface.GetAllNetworkInterfaces
 

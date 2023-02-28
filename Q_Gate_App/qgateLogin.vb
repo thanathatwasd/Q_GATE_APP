@@ -1,4 +1,5 @@
-﻿Imports Nancy.Json
+﻿Imports System.Globalization
+Imports Nancy.Json
 Public Class qgateLogin
     Dim md As New ModelVB
     Dim status As Boolean = False
@@ -33,9 +34,12 @@ Public Class qgateLogin
                         Dim ctuser As Integer = 1
                         Module1.set_ctUser(ctuser)
                         tbLoginUser.Text = ""
+
+
                         Me.Hide()
 
                     Else
+                        'PlayLoopingBackgroundSoundFile()
                         MsgBox("Login Fail")
                         tbLoginUser.Text = ""
                     End If
@@ -53,7 +57,7 @@ Public Class qgateLogin
     Public Function checkPosition()
         Dim mac = getMacAddress()
         Macadd = md.get_Mac_Address(mac)
-
+        'MsgBox("Macadd==> " & Macadd)
 
         Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(Macadd)
         For Each item As Object In dict2
@@ -70,7 +74,6 @@ Public Class qgateLogin
         getTypeByPosition(setphaseid, setzoneid, setstationid)
 
         Dim zone = md.get_Zone_Set_menu(setzoneid)
-
 
         Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(zone)
         For Each item As Object In dict3
@@ -184,5 +187,20 @@ Public Class qgateLogin
         Return status
     End Function
 
+    Private Sub tbLoginUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbLoginUser.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
+                e.Handled = False
+            Case 8, 13, 46 ' Backspace = 8, Enter = 13, Delete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
 
+        End Select
+    End Sub
+
+
+    'Sub PlayLoopingBackgroundSoundFile()
+    '    My.Computer.Audio.Play("D:\nakom.wav")
+    'End Sub
 End Class

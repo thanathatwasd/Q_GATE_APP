@@ -6,17 +6,17 @@ Public Class qgateAddUser
     Dim staffcode
     Dim datetime1 As String
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        qgateSelectMenu.Show()
-        Me.Close()
-    End Sub
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
         If tbAddUser.Text = "" Then
             MsgBox("กรุณาเพิ่มชื่อพนักงาน")
         Else
             qgateSelectMenu.Show()
             Me.Close()
         End If
+    End Sub
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
 
+        qgateSelectMenu.Show()
+        Me.Close()
     End Sub
     Private Sub qgateAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
           Timer1.Enabled = True

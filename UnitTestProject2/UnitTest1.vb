@@ -136,4 +136,13 @@ Imports Q_Gate_App
     '    MsgBox("rs===>" & rs)
     '    Assert.AreNotEqual(False, rs)
     'End Sub
+
+
+    <TestMethod()> Public Sub TestMethod6()
+        Dim obj As New qgateScanTag
+        Dim rs As Boolean = obj.genlot("2023-02-20")
+        MsgBox("rs===>" & rs)
+        Assert.AreNotEqual(False, rs)
+    End Sub
+
 End Class

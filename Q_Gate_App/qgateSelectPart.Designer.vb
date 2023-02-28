@@ -40,12 +40,12 @@ Partial Class qgateSelectPart
         'cbSelectPart
         '
         Me.cbSelectPart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSelectPart.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSelectPart.Font = New System.Drawing.Font("MADE Dillan", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSelectPart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
         Me.cbSelectPart.FormattingEnabled = True
         Me.cbSelectPart.Location = New System.Drawing.Point(80, 305)
         Me.cbSelectPart.Name = "cbSelectPart"
-        Me.cbSelectPart.Size = New System.Drawing.Size(334, 41)
+        Me.cbSelectPart.Size = New System.Drawing.Size(334, 43)
         Me.cbSelectPart.TabIndex = 0
         '
         'pbConfirm
@@ -70,24 +70,23 @@ Partial Class qgateSelectPart
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(754, 47)
+        Me.lbStation.Location = New System.Drawing.Point(748, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(0, 25)
+        Me.lbStation.Size = New System.Drawing.Size(0, 24)
         Me.lbStation.TabIndex = 5
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(469, 47)
+        Me.lbZone.Location = New System.Drawing.Point(463, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(17, 25)
+        Me.lbZone.Size = New System.Drawing.Size(0, 24)
         Me.lbZone.TabIndex = 4
-        Me.lbZone.Text = " "
         '
         'Timer1
         '
@@ -95,9 +94,10 @@ Partial Class qgateSelectPart
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("MADE Dillan", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(20, 97)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(97, 35)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Label1"
         Me.Label1.Visible = False
@@ -106,25 +106,24 @@ Partial Class qgateSelectPart
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(414, 9)
+        Me.Label2.Location = New System.Drawing.Point(357, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 25)
+        Me.Label2.Size = New System.Drawing.Size(66, 24)
         Me.Label2.TabIndex = 48
-        Me.Label2.Text = "User : "
+        Me.Label2.Text = "User :"
         '
         'lbUserName
         '
         Me.lbUserName.AutoSize = True
         Me.lbUserName.BackColor = System.Drawing.Color.Transparent
-        Me.lbUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUserName.Font = New System.Drawing.Font("MADE Dillan", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbUserName.Location = New System.Drawing.Point(491, 9)
+        Me.lbUserName.Location = New System.Drawing.Point(429, 12)
         Me.lbUserName.Name = "lbUserName"
-        Me.lbUserName.Size = New System.Drawing.Size(19, 25)
+        Me.lbUserName.Size = New System.Drawing.Size(0, 24)
         Me.lbUserName.TabIndex = 47
-        Me.lbUserName.Text = "-"
         '
         'qgateSelectPart
         '

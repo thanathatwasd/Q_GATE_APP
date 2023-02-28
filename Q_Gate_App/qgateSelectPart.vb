@@ -136,7 +136,7 @@ Public Class qgateSelectPart
             Next
 
             Module1.dmcqrscan = dmccheck
-            MsgBox("Module1.dmcqrscan===> " & Module1.dmcqrscan)
+            'MsgBox("Module1.dmcqrscan===> " & Module1.dmcqrscan)
             Module1.Locationpart = Locationpart
             Module1.partnamedigit = partname
             ' MsgBox("partno===> " & partno)

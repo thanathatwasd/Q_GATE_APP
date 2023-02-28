@@ -49,7 +49,7 @@ Partial Class qgateReprintScanPrint
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(629, 85)
+        Me.PictureBox2.Location = New System.Drawing.Point(632, 99)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(149, 66)
         Me.PictureBox2.TabIndex = 23
@@ -58,7 +58,7 @@ Partial Class qgateReprintScanPrint
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(465, 85)
+        Me.PictureBox1.Location = New System.Drawing.Point(468, 99)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(148, 66)
         Me.PictureBox1.TabIndex = 22
@@ -67,7 +67,7 @@ Partial Class qgateReprintScanPrint
         'pbPrint
         '
         Me.pbPrint.BackColor = System.Drawing.Color.Transparent
-        Me.pbPrint.Location = New System.Drawing.Point(631, 504)
+        Me.pbPrint.Location = New System.Drawing.Point(634, 518)
         Me.pbPrint.Name = "pbPrint"
         Me.pbPrint.Size = New System.Drawing.Size(147, 63)
         Me.pbPrint.TabIndex = 20
@@ -76,7 +76,7 @@ Partial Class qgateReprintScanPrint
         'pbClear
         '
         Me.pbClear.BackColor = System.Drawing.Color.Transparent
-        Me.pbClear.Location = New System.Drawing.Point(463, 501)
+        Me.pbClear.Location = New System.Drawing.Point(466, 515)
         Me.pbClear.Name = "pbClear"
         Me.pbClear.Size = New System.Drawing.Size(148, 66)
         Me.pbClear.TabIndex = 19
@@ -85,7 +85,7 @@ Partial Class qgateReprintScanPrint
         'pbBackReprintToMenu
         '
         Me.pbBackReprintToMenu.BackColor = System.Drawing.Color.Transparent
-        Me.pbBackReprintToMenu.Location = New System.Drawing.Point(25, 501)
+        Me.pbBackReprintToMenu.Location = New System.Drawing.Point(28, 515)
         Me.pbBackReprintToMenu.Name = "pbBackReprintToMenu"
         Me.pbBackReprintToMenu.Size = New System.Drawing.Size(155, 66)
         Me.pbBackReprintToMenu.TabIndex = 18
@@ -102,7 +102,7 @@ Partial Class qgateReprintScanPrint
         Me.pnListPrint.Controls.Add(Me.lbModel)
         Me.pnListPrint.Controls.Add(Me.lbPartNum)
         Me.pnListPrint.Controls.Add(Me.tbScanTag)
-        Me.pnListPrint.Location = New System.Drawing.Point(23, 160)
+        Me.pnListPrint.Location = New System.Drawing.Point(26, 174)
         Me.pnListPrint.Name = "pnListPrint"
         Me.pnListPrint.Size = New System.Drawing.Size(755, 316)
         Me.pnListPrint.TabIndex = 21
@@ -110,111 +110,109 @@ Partial Class qgateReprintScanPrint
         'lbShift
         '
         Me.lbShift.AutoSize = True
-        Me.lbShift.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbShift.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbShift.ForeColor = System.Drawing.Color.White
         Me.lbShift.Location = New System.Drawing.Point(461, 199)
         Me.lbShift.Name = "lbShift"
-        Me.lbShift.Size = New System.Drawing.Size(19, 25)
+        Me.lbShift.Size = New System.Drawing.Size(18, 22)
         Me.lbShift.TabIndex = 6
         Me.lbShift.Text = "-"
         '
         'lbLotNum
         '
         Me.lbLotNum.AutoSize = True
-        Me.lbLotNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbLotNum.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbLotNum.ForeColor = System.Drawing.Color.White
         Me.lbLotNum.Location = New System.Drawing.Point(461, 136)
         Me.lbLotNum.Name = "lbLotNum"
-        Me.lbLotNum.Size = New System.Drawing.Size(19, 25)
+        Me.lbLotNum.Size = New System.Drawing.Size(18, 22)
         Me.lbLotNum.TabIndex = 5
         Me.lbLotNum.Text = "-"
         '
         'lbCheckDate
         '
         Me.lbCheckDate.AutoSize = True
-        Me.lbCheckDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbCheckDate.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCheckDate.ForeColor = System.Drawing.Color.White
         Me.lbCheckDate.Location = New System.Drawing.Point(127, 263)
         Me.lbCheckDate.Name = "lbCheckDate"
-        Me.lbCheckDate.Size = New System.Drawing.Size(19, 25)
+        Me.lbCheckDate.Size = New System.Drawing.Size(18, 22)
         Me.lbCheckDate.TabIndex = 4
         Me.lbCheckDate.Text = "-"
         '
         'lbQty
         '
         Me.lbQty.AutoSize = True
-        Me.lbQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbQty.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbQty.ForeColor = System.Drawing.Color.White
         Me.lbQty.Location = New System.Drawing.Point(85, 199)
         Me.lbQty.Name = "lbQty"
-        Me.lbQty.Size = New System.Drawing.Size(19, 25)
+        Me.lbQty.Size = New System.Drawing.Size(18, 22)
         Me.lbQty.TabIndex = 3
         Me.lbQty.Text = "-"
         '
         'lbBoxNum
         '
         Me.lbBoxNum.AutoSize = True
-        Me.lbBoxNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbBoxNum.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBoxNum.ForeColor = System.Drawing.Color.White
         Me.lbBoxNum.Location = New System.Drawing.Point(461, 76)
         Me.lbBoxNum.Name = "lbBoxNum"
-        Me.lbBoxNum.Size = New System.Drawing.Size(19, 25)
+        Me.lbBoxNum.Size = New System.Drawing.Size(18, 22)
         Me.lbBoxNum.TabIndex = 3
         Me.lbBoxNum.Text = "-"
         '
         'lbModel
         '
         Me.lbModel.AutoSize = True
-        Me.lbModel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbModel.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbModel.ForeColor = System.Drawing.Color.White
         Me.lbModel.Location = New System.Drawing.Point(85, 136)
         Me.lbModel.Name = "lbModel"
-        Me.lbModel.Size = New System.Drawing.Size(19, 25)
+        Me.lbModel.Size = New System.Drawing.Size(18, 22)
         Me.lbModel.TabIndex = 2
         Me.lbModel.Text = "-"
         '
         'lbPartNum
         '
         Me.lbPartNum.AutoSize = True
-        Me.lbPartNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbPartNum.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPartNum.ForeColor = System.Drawing.Color.White
         Me.lbPartNum.Location = New System.Drawing.Point(97, 76)
         Me.lbPartNum.Name = "lbPartNum"
-        Me.lbPartNum.Size = New System.Drawing.Size(19, 25)
+        Me.lbPartNum.Size = New System.Drawing.Size(18, 22)
         Me.lbPartNum.TabIndex = 1
         Me.lbPartNum.Text = "-"
         '
         'tbScanTag
         '
-        Me.tbScanTag.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.tbScanTag.Location = New System.Drawing.Point(115, 9)
+        Me.tbScanTag.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbScanTag.Location = New System.Drawing.Point(114, 8)
         Me.tbScanTag.Name = "tbScanTag"
-        Me.tbScanTag.Size = New System.Drawing.Size(320, 29)
+        Me.tbScanTag.Size = New System.Drawing.Size(320, 30)
         Me.tbScanTag.TabIndex = 0
         '
         'lbStation
         '
         Me.lbStation.AutoSize = True
         Me.lbStation.BackColor = System.Drawing.Color.Transparent
-        Me.lbStation.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbStation.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbStation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbStation.Location = New System.Drawing.Point(737, 34)
+        Me.lbStation.Location = New System.Drawing.Point(739, 49)
         Me.lbStation.Name = "lbStation"
-        Me.lbStation.Size = New System.Drawing.Size(16, 24)
+        Me.lbStation.Size = New System.Drawing.Size(0, 22)
         Me.lbStation.TabIndex = 25
-        Me.lbStation.Text = "-"
         '
         'lbZone
         '
         Me.lbZone.AutoSize = True
         Me.lbZone.BackColor = System.Drawing.Color.Transparent
-        Me.lbZone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbZone.Font = New System.Drawing.Font("MADE Dillan", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbZone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer))
-        Me.lbZone.Location = New System.Drawing.Point(464, 36)
+        Me.lbZone.Location = New System.Drawing.Point(464, 49)
         Me.lbZone.Name = "lbZone"
-        Me.lbZone.Size = New System.Drawing.Size(16, 24)
+        Me.lbZone.Size = New System.Drawing.Size(0, 22)
         Me.lbZone.TabIndex = 24
-        Me.lbZone.Text = "-"
         '
         'qgateReprintScanPrint
         '

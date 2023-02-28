@@ -1,4 +1,5 @@
-﻿Imports Nancy.Json
+﻿Imports System.Globalization
+Imports Nancy.Json
 Public Class qgateScanTag
     Dim md As New ModelVB
     Dim a As String
@@ -14,19 +15,30 @@ Public Class qgateScanTag
 
     Dim codemaster As String
     Private Sub pbSelectModel_Click(sender As Object, e As EventArgs) Handles pbSelectModel.Click
+        If serialnc = "" And serialng = "" Then
 
-        qgateSelectPart.Show()
-        Me.Close()
+            qgateSelectPart.Show()
+            Me.Close()
+        Else
+            MsgBox("กรุณากดปริ้น TAG NC NG ก่อน")
+        End If
+
     End Sub
 
     Private Sub pbBackToMenu_Click(sender As Object, e As EventArgs) Handles pbBackToMenu.Click
-        If type = "1" Or type = "2" Then
-            qgateSelectMenu.Show()
-            Me.Close()
+        If serialnc = "" And serialng = "" Then
+            If type = "1" Or type = "2" Then
+                qgateSelectMenu.Show()
+                Me.Close()
+            Else
+                qgateMenuStart.Show()
+                Me.Close()
+            End If
         Else
-            qgateMenuStart.Show()
-            Me.Close()
+            MsgBox("กรุณากดปริ้น TAG NC NG ก่อน")
         End If
+
+
     End Sub
 
     Private Sub qgateScanTag_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -34,7 +46,10 @@ Public Class qgateScanTag
         lbZone.Text = zoneset
         lbStation.Text = setstationid
         lbpart.Text = Module1.qgate_part_no
-        lbUserName.Text = Module1.num_user(0)
+        lbUserName.Text = user
+        '& Module1.num_user(1) & Module1.num_user(2) & Module1.num_user(3) & Module1.num_user(4)
+
+
         'MsgBox("Type ====>  " & type)
         If type = "1" Then
             pbSelectModel.Visible = True
@@ -49,10 +64,6 @@ Public Class qgateScanTag
     End Sub
     Private Sub tbScanTag_KeyDown(sender As Object, e As KeyEventArgs) Handles tbScanTag.KeyDown
         If e.KeyCode = Keys.Enter Then
-
-            timenow = (DateTime.Now.ToString("yyyy-MM-dd"))
-            'MsgBox("timenow==> " & timenow)
-            lotcur = md.get_Lotcur(timenow)
             'MsgBox("lotcur==> " & lotcur)
             If type = "1" Then
                 If lbpart.Text = "NO_DATA" Then
@@ -81,9 +92,62 @@ Public Class qgateScanTag
 
     End Sub
 
+    Public Function getboxandlot(partnotagfa As String)
+        timenow = (DateTime.Now.ToString("yyyy-MM-dd"))
+        MsgBox("timenow==> " & timenow)
+
+        Dim dt As Date = Date.Today
 
 
+        Dim a = dt.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
+        Dim b = dt.AddDays(-1).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
+        Dim o = md.get_BoxNo_Lotcurrent(a, partnotagfa)
+        Dim l = md.get_BoxNo_Lotcurrent(b, partnotagfa)
+        Dim boxcurrent
 
+
+        If o <> "0" Then
+            If TimeOfDay.ToString("HH:mm:ss") >= "08:00:00" Then
+                Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(o)
+                For Each item As Object In dict3
+                    lotcu = item("ifts_lot_current").ToString
+                    boxcurrent = item("iotc_count_box").ToString
+                Next
+                BoxNum = boxcurrent
+                lotcur = lotcu
+            Else
+                Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(l)
+                For Each item As Object In dict3
+                    lotcu = item("ifts_lot_current").ToString
+                    boxcurrent = item("iotc_count_box").ToString
+                Next
+                BoxNum = boxcurrent
+                lotcur = lotcu
+            End If
+        Else
+            If TimeOfDay.ToString("HH:mm:ss") >= "08:00:00" Then
+                BoxNum = 0
+                genlot(timenow)
+            Else
+                Dim dict3 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(l)
+                For Each item As Object In dict3
+                    lotcu = item("ifts_lot_current").ToString
+                    boxcurrent = item("iotc_count_box").ToString
+                Next
+                BoxNum = boxcurrent
+                lotcur = lotcu
+            End If
+        End If
+        Module1.BoxNum += 1
+    End Function
+
+    Public Function genlot(timenow As String)
+
+        lotcur = md.get_Lotcur(timenow)
+
+        status = True
+        Return status
+    End Function
 
 
 
@@ -136,9 +200,12 @@ Public Class qgateScanTag
                         'MsgBox("partplant==>" & partplant)
                         partbox = scantag.Substring(100, 3)
                         'MsgBox("partbox==>" & partbox)
+
+
+                        getboxandlot(partnotagfa)
                         Dim rsinserttagfa = md.insert_tag_fa(codemaster, scantag, partline, partplandate, partseqplan, partnotagfa, partactualdate1, partasnp,
                                                        partlotno, partactualdate2, partseqactual, partplant, partbox, lotcur)
-                        Module1.BoxNum += 1
+
                         If BoxNum <= 9 Then
                             Box_seq = "00" & BoxNum
                         ElseIf BoxNum <= 99 Then
@@ -224,9 +291,20 @@ Public Class qgateScanTag
                     'MsgBox("partplant==>" & partplant)
                     partbox = scantag.Substring(100, 3)
                     'MsgBox("partbox==>" & partbox)
+
+                    getboxandlot(partnotagfa)
                     Dim rsinserttagfa = md.insert_tag_fa(codemaster, scantag, partline, partplandate, partseqplan, partnotagfa, partactualdate1, partasnp,
                                                        partlotno, partactualdate2, partseqactual, partplant, partbox, lotcur)
 
+
+
+                    If BoxNum <= 9 Then
+                        Box_seq = "00" & BoxNum
+                    ElseIf BoxNum <= 99 Then
+                        Box_seq = "0" & BoxNum
+                    Else
+                        Box_seq = BoxNum
+                    End If
                     tbScanTag.Text = ""
 
                     Module1.tagfa = scantag
@@ -253,5 +331,11 @@ Public Class qgateScanTag
         Return status
     End Function
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        serialnc = ""
+        serialng = ""
+        MsgBox("serialnc===> " & serialnc)
+        MsgBox("serialng===> " & serialng)
 
+    End Sub
 End Class

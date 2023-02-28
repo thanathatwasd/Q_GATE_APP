@@ -5,6 +5,20 @@ Public Class qgateReprintTag
     Dim res As String
     Dim getLotNo
     Dim status As Boolean = False
+    Dim reprintpartno As String
+    Dim reprintpartname As String
+    Dim reprintsnp As String
+    Dim reprintcountbox As String
+    Dim reprintcheckdate As String
+    Dim reprintlotcurrent As String
+    Dim reprintlotproduct As String
+    Dim reprintshift As String
+    Dim reprintlinecd As String
+    Dim reprintphasename As String
+    Dim reprintlocation As String
+    Dim reprinttagqgate As String
+    Dim tagfaid As String
+    Dim qrproduct As String
     Private Sub qgateReprintTag_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbZone.Text = zoneset
         lbStation.Text = setstationid
@@ -118,6 +132,33 @@ Public Class qgateReprintTag
     Private Sub pbPrint_Click(sender As Object, e As EventArgs) Handles pbPrint.Click
         Dim a = getid()
         md.insert_log_reprint(a, num_user(0))
+        Dim gettag = md.get_TagQgate(a)
+        MsgBox(gettag)
+        Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(gettag)
+        For Each item As Object In dict2
+            reprintpartno = item("ifts_part_no").ToString
+            reprintpartname = item("msp_part_name").ToString
+            reprintsnp = item("ifts_snp").ToString
+            reprintcountbox = item("iotc_count_box").ToString
+            reprintcheckdate = item("date_tag").ToString
+            reprintlotcurrent = item("ifts_lot_current").ToString
+            reprintlotproduct = item("ifts_lot_no_prod").ToString
+            reprintshift = item("iodc_shift").ToString
+            reprintlinecd = item("ifts_line_cd").ToString
+            reprintphasename = item("mpa_name").ToString
+            reprintlocation = item("mpn_location").ToString
+            reprinttagqgate = item("iotc_tag_qgate").ToString
+            tagfaid = item("ifts_id").ToString
+
+        Next
+        Dim allqrproduct = md.get_QRProductToGenQr(tagfaid)
+        'MsgBox("allqrproduct===> " & allqrproduct)
+        Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(allqrproduct)
+        For Each item As Object In dict6
+            Module1.qrpro = (item("iodc_id").ToString)
+            qrproduct &= Module1.qrpro & " "
+        Next
+        PrintTag.Set_parameter_print(reprintpartno, reprintpartname, "1", reprintlotcurrent, reprintcountbox, reprintsnp, "1", "999", qrproduct, "001", "001", reprintshift, "01000", reprintlocation, reprintcheckdate, "1", reprintlotproduct, reprintlinecd, reprinttagqgate)
         MsgBox("ปริ้น Tag สำเร็จ")
     End Sub
     Public Function getid()
@@ -127,6 +168,7 @@ Public Class qgateReprintTag
         Next
         Return rs
     End Function
+
 
     Private Sub CbPartNum_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbPartNum.SelectedIndexChanged
         CbLotNum.Items.Clear()
