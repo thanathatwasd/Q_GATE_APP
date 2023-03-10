@@ -63,8 +63,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MessagingToolkit.QRCode">
@@ -103,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\api.vb" />
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="model\modelDefect.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -322,6 +325,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -506,6 +510,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="3.ico" />
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_10.jpg" />
+    <None Include="Resources\LINE_ALBUM_Alert and button_230220_42.jpg" />
+    <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_15.jpg" />
     <None Include="Resources\Del_user1.jpg" />
     <None Include="Resources\Del_user.jpg" />
     <None Include="Resources\Reprint_defect.jpg" />

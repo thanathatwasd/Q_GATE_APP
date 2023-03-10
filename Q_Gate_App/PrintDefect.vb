@@ -107,17 +107,22 @@ Public Class PrintDefect
         e.Graphics.DrawString("DEFECT QR.", IN_FO.Font, Brushes.White, 16, 214)
         e.Graphics.DrawLine(aPen, 8, 230, 587, 230) 'แก้ตำแหน่งที่ 2 , 4
 
-        If sDefect = "1" Then
-            e.Graphics.FillRectangle(Brushes.Black, 560, 4, 121, 97) ' NG/NC BACKGROUD Black
-            e.Graphics.DrawString("NG", Label14.Font, Brushes.White, 548, 1) ' left top
-        ElseIf sDefect = "2" Then
-            e.Graphics.DrawString("NC", Label14.Font, Brushes.Black, 548, 1) ' left top
+
+        ' MsgBox(sDefect)
+        'e.Graphics.DrawString(typeproduct, Label1.Font, Brushes.Black, 560, 20)
+
+        If typeproduct = "NG" Then
+            e.Graphics.FillRectangle(Brushes.Black, 560, 5, 122, 97) ' NG/NC BACKGROUD Black
+            e.Graphics.DrawString("NG", Label1.Font, Brushes.White, 560, 20) ' left top
+        ElseIf typeproduct = "NC" Then
+            e.Graphics.FillRectangle(Brushes.White, 10, 100, 110, 20) ' background back
+            e.Graphics.DrawString("NC", Label1.Font, Brushes.Black, 560, 20) ' left top
+
         End If
         e.Graphics.DrawLine(aPen, 8, 280, 681, 280) 'แก้ตำแหน่งที่ 2 , 4
         'Details'
         e.Graphics.DrawString("PART NO:", title.Font, Brushes.Black, 130, 10)
         e.Graphics.DrawString(part_no, values.Font, Brushes.Black, 150, 31)
-        e.Graphics.DrawString(typeproduct, Label1.Font, Brushes.Black, 560, 20)
         e.Graphics.DrawString("PART NAME:", title.Font, Brushes.Black, 130, 60)
         e.Graphics.DrawString(PART_NAME, values.Font, Brushes.Black, 150, 78)
         e.Graphics.DrawString("MODEL:", title.Font, Brushes.Black, 130, 105)
@@ -144,6 +149,7 @@ Public Class PrintDefect
         Dim dataQrdefectcodedetails As String = ""
         Dim mgtop As Integer = 250
         Dim mgleft As Integer = 15
+
         e.Graphics.DrawString(dataDefect, detail_code.Font, Brushes.Black, mgleft, mgtop)
         e.Graphics.DrawString("QTY :", title.Font, Brushes.Black, 570, 150)
         e.Graphics.DrawString(QTY, values.Font, Brushes.Black, 610, 167)

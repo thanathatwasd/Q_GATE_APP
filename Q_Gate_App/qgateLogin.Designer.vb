@@ -23,6 +23,7 @@ Partial Class qgateLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(qgateLogin))
         Me.tbLoginUser = New System.Windows.Forms.TextBox()
         Me.pbConfig = New System.Windows.Forms.PictureBox()
         Me.pbExit = New System.Windows.Forms.PictureBox()
@@ -97,6 +98,7 @@ Partial Class qgateLogin
         Me.Controls.Add(Me.tbLoginUser)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "qgateLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "qgate"

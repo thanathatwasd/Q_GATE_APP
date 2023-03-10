@@ -437,44 +437,48 @@ Public Class qgateOperationManual
 
     Public Function finish()
         If My.Computer.Network.Ping(md.get_DatabaseServer()) Then
-            Dim allqrproduct = md.Get_QRProductToGenQr(tagfaid)
-            Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(allqrproduct)
-            For Each item As Object In dict6
-                Module1.qrpro = (item("iodc_id").ToString)
-                t &= Module1.qrpro & " "
-                j += 1
-            Next
-            Module1.countboxng = lbBoxNumNg.Text
-            Module1.countboxnc = lbBoxNumNc.Text
-            Module1.countng = tbCounterNg.Text
-            Module1.countnc = tbCounterNc.Text
-            Dim a = tbCounter.Text
-            Dim b
-            If a.Length = 1 Then
-                b = "     " & a
+            If tbCounter.Text > 0 Then
+
+
+                Dim allqrproduct = md.Get_QRProductToGenQr(tagfaid)
+                Dim dict6 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(allqrproduct)
+                For Each item As Object In dict6
+                    Module1.qrpro = (item("iodc_id").ToString)
+                    t &= Module1.qrpro & " "
+                    j += 1
+                Next
+                Module1.countboxng = lbBoxNumNg.Text
+                Module1.countboxnc = lbBoxNumNc.Text
+                Module1.countng = tbCounterNg.Text
+                Module1.countnc = tbCounterNc.Text
+                Dim a = tbCounter.Text
+                Dim b
+                If a.Length = 1 Then
+                    b = "     " & a
+                End If
+                If a.Length = 2 Then
+                    b = "    " & a
+                End If
+                If a.Length = 3 Then
+                    b = "   " & a
+                End If
+                If a.Length = 4 Then
+                    b = "  " & a
+                End If
+                If a.Length = 5 Then
+                    b = " " & a
+                End If
+                If a.Length = 6 Then
+                    b = a
+                End If
+                Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & b & lotcur & "                         " & (DateTime.Now.ToString("yyyyMMdd") & partseqplan & Module1.phaseplant & Box_seq)))
+                md.insert_Tag_Qgate_complete(tagfaid, Box_seq, "1", num_user(0), tagqgate)
+                productcount = 0
+                Dim flgprinttype As String = "normalprint"
+                PrintTag.Set_parameter_print(partnotagfa, partnamedigit, "1", lotcur, Box_seq, a, "1", "999", t, "001", "001", workshiftid, "01000", Locationpart, DateTime.Now.ToString("dd/MM/yyyy"), "1", lotproduct, partline, tagqgate, flgprinttype)
             End If
-            If a.Length = 2 Then
-                b = "    " & a
-            End If
-            If a.Length = 3 Then
-                b = "   " & a
-            End If
-            If a.Length = 4 Then
-                b = "  " & a
-            End If
-            If a.Length = 5 Then
-                b = " " & a
-            End If
-            If a.Length = 6 Then
-                b = a
-            End If
-            Dim tagqgate = (partcodemaster & partline & partplandate & partseqplan & partnotagfa & (DateTime.Now.ToString("yyyyMMdd") & b & lotcur & "                         " & (DateTime.Now.ToString("yyyyMMdd") & partseqplan & Module1.phaseplant & Box_seq)))
-            md.insert_Tag_Qgate_complete(tagfaid, Box_seq, "1", num_user(0), tagqgate)
-            productcount = 0
-            Dim flgprinttype As String = "normalprint"
-            PrintTag.Set_parameter_print(partnotagfa, partnamedigit, "1", lotcur, Box_seq, a, "1", "999", t, "001", "001", workshiftid, "01000", Locationpart, DateTime.Now.ToString("dd/MM/yyyy"), "1", lotproduct, partline, tagqgate, flgprinttype)
         Else
-            MsgBox("Waiting Internet")
+                MsgBox("Waiting Internet")
         End If
     End Function
 End Class

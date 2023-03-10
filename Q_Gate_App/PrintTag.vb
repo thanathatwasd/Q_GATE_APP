@@ -23,6 +23,7 @@ Public Class PrintTag
     Private qrtagqgate As String = "NO DATA"
     Private flgprint As String = "NO DATA"
     Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String, default_box As Integer, COUNT_TEXTBOX As String, para_shift As String, cus_item_cd As String, lo As String, date_check As String, status_print As String, lProd As String, linepro As String, tagqgate As String, flgprinttype As String)
+
         Dim con_date_check As Date = date_check
         part_no = LB_PART_NO
         PART_NAME = LB_PART_NAME
@@ -40,7 +41,9 @@ Public Class PrintTag
         Else
             box_seq = BOX_NO
         End If
+
         date_check_q_gate = con_date_check.ToString("dd/MM/yyyy")
+
         M_BOX = max_box
         SHIFT = para_shift
         CHECK_DATE = "NO_DATA"
@@ -111,7 +114,7 @@ Public Class PrintTag
         e.Graphics.DrawString("10", Label1.Font, Brushes.Black, 490, 262)
         Dim qrcode As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
         qrcode.QRCodeScale = 10
-        MsgBox(QR_PRODUCT)
+
         Dim bitmap_qr_box As Bitmap = qrcode.Encode(qrtagqgate)
         Dim bitmap_qr_product As Bitmap = qrcode.Encode(QR_PRODUCT)
         e.Graphics.DrawImage(bitmap_qr_box, 570, 12, 85, 85) 'TOP

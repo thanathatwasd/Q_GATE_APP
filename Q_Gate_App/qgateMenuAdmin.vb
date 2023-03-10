@@ -6,7 +6,7 @@ Public Class qgateMenuAdmin
     Dim staffid
 
     Private Sub qgateMenuAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        datetime = qgateLoginAdmin.Label1.Text
+        datetime = qgateLoginAdmin.Label2.Text
     End Sub
 
     Private Sub pbLogout_Click(sender As Object, e As EventArgs) Handles pbLogout.Click

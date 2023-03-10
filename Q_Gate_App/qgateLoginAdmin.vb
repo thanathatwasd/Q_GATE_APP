@@ -6,16 +6,16 @@ Public Class qgateLoginAdmin
     Dim permissionid
     Dim rsCheckUser
 
-    Private Sub tbLoginAdmin_KeyDown(sender As Object, e As KeyEventArgs) Handles tbLoginAdmin.KeyDown
+    Private Sub tbLoginAdmin1_KeyDown(sender As Object, e As KeyEventArgs) Handles tbLoginAdmin1.KeyDown
         If e.KeyCode = Keys.Enter Then
-            If checkLoginAdmin(tbLoginAdmin.Text) Then
+            If checkLoginAdmin(tbLoginAdmin1.Text) Then
                 qgateMenuAdmin.Show()
                 Me.Close()
             End If
         End If
     End Sub
 
-    Private Sub btnBackToLogin_Click(sender As Object, e As EventArgs) Handles pbBackToLogin.Click
+    Private Sub btnBackToLogin1_Click(sender As Object, e As EventArgs) Handles pbBackToLogin1.Click
         qgateLogin.Show()
         Me.Close()
     End Sub
@@ -54,14 +54,14 @@ Public Class qgateLoginAdmin
         End If
     End Function
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Label1.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm")
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Label2.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm")
     End Sub
 
     Private Sub qgateLoginAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Enabled = True
+        Timer2.Enabled = True
     End Sub
-    Private Sub tbLoginAdmin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbLoginAdmin.KeyPress
+    Private Sub tbLoginAdmin1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbLoginAdmin1.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
                 e.Handled = False
@@ -71,4 +71,6 @@ Public Class qgateLoginAdmin
                 e.Handled = True
         End Select
     End Sub
+
+
 End Class
