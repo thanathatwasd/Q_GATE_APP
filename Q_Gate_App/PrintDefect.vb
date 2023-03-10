@@ -26,117 +26,81 @@ Public Class PrintDefect
     Dim qtyDefect As String = ""
     Dim lCodedefect As String = ""
     Dim TypeMenu As String = ""
+    Private part_no As String = "NO_DATA"
+    Private PART_NAME As String = "NO_DATA"
+    Private Model As String = "NO_DATA"
+    Private LOT_NO As String = "NO_DATA"
+    Private LOT_PRODUCTION As String = "No_DATA"
+    Private BOX_NO As Integer = 0
+    Private SHIFT As String = "NO_DATA"
+    Private QTY As String = "NO_DATA"
+    Private LINE As String = "NO_DATA"
+    Private CHECK_DATE As String = "NO_DATA"
+    Private M_BOX As String = "NO_DATA"
+    Private NEW_QR As String = "NO_DATA"
+    Private box_seq As String = "NO_DATA"
+    Private new_gen_qr As String = "NO_DATA"
+    Private QR_PRODUCT As String = "NO_DATA"
+    Private WASHING_DATE As String = "NO DATA"
+    Private CUST_ITEM_CD As String = "NO DATA"
+    Private location As String = "NO DATA"
+    Private date_check_q_gate As String = "dd/MM/yyyy"
+    Private qrtagdefect As String = "NO DATA"
+    Private defectcode As String = "NO DATA"
+
+    Private typeproduct As String = "NO DATA"
     Private Sub printDefect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' PrintDocument1.Print()
         PrintPreviewDialog1.ShowDialog()
     End Sub
-    Public Sub Set_parameter_print(pNo As String, pName As String, Model As String, Line As String, atDate As Date, Location As String, Shift As String, Phase As String, lot As String, gQtyDefect As String, seqQty As String, wi As String, itemType As String, cDefect As String, dfType As String, dti_menu As String)
-        'lPartno = pNo
-        'lPartname = pName
-        'lModel = Model
-        'lLine = Line
-        'Dim rsDate As String = atDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)
-        'lActualdate = rsDate
-        'lLocation = Location
-        'lShift = Shift
-        'lPhase = Phase
-        'pCd = getPlant(lPhase)
-        'lLot = lot
-        'lSeq = seqQty
-        'lwi = wi
-        'If dfType = "NC" Then
-        '    sDefect = "2"
-        'ElseIf dfType = "NG" Then
-        '    sDefect = "1"
-        'End If
-        '' sDefect = dfType '"2" 'da_type
-        'lItemtype = itemType
-        'qtyDefect = gQtyDefect
-        'lCodedefect = cDefect
-        'TypeMenu = dti_menu
+
+    Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String, default_box As Integer, COUNT_TEXTBOX As String, para_shift As String, cus_item_cd As String, lo As String, date_check As String, status_print As String, lProd As String, linepro As String, tagdefect As String, defect As String, producttype As String)
+        Dim con_date_check As Date = date_check
+        part_no = LB_PART_NO
+        PART_NAME = LB_PART_NAME
+        Model = LB_MODEL
+        LOT_NO = LB_LOT
+        LOT_PRODUCTION = lProd
+        LINE = linepro
+        QTY = LB_SNP
+        BOX_NO = LB_COUNTBOX
+        defectcode = defect
+        typeproduct = producttype
+        If typeproduct = "1" Then
+            typeproduct = "NC"
+        Else
+            typeproduct = "NG"
+        End If
+        date_check_q_gate = con_date_check.ToString("dd/MM/yyyy")
+        M_BOX = max_box
+        SHIFT = para_shift
+        CHECK_DATE = "NO_DATA"
+        qrtagdefect = tagdefect
+        Dim tem_qr As String = NEW_QR & box_seq
+        QR_PRODUCT = QR_PRODUCT_SCAN
+        CUST_ITEM_CD = cus_item_cd
+        location = lo
         PrintPreviewDialog1.ShowDialog()
-        'PrintDocument1.Print()
     End Sub
-
-    'Public Function getPlant(phase)
-    '    Dim plant As String = "NO_DATA"
-    '    If phase = "10" Then
-    '        plant = "51"
-    '    ElseIf phase = "8" Then
-    '        plant = "52"
-    '    Else
-    '        plant = "NO PLANT"
-    '    End If
-    '    Return plant
-    'End Function
-
-
     Private Sub PrintDocument1_PrintPage_1(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim md = New modelDefect()
-        'Dim sDefect As String = ""
-        'Dim dfAdminHome As New defectAdminhome
-
-        'If dfAdminHome.dfType = "NC" Then
-        '    sDefect = "2"
-        'ElseIf dfAdminHome.dfType = "NG" Then
-        '    sDefect = "1"
-        'End If
-        'Dim rs = md.mGetDatadefectcodeprint(lwi, lLot, lSeq, lPartno, sDefect)
-
-
-        'Dim BoxNo = md.mGetboxInformation(lwi, lLot, lSeq) + 1
         Dim bNo As String = ""
         Dim aPen = New Pen(Color.Black)
-        'If Len(Trim(BoxNo)) = 1 Then
-        '    bNo = "00" & BoxNo
-        'ElseIf Len(Trim(BoxNo)) = 2 Then
-        '    bNo = "0" & BoxNo
-        'ElseIf Len(Trim(BoxNo)) = 3 Then
-        '    bNo = BoxNo
-        'End If
         e.Graphics.DrawLine(Pens.Azure, 10, 10, 20, 20)
         aPen.Width = 3.0F  'border 
-        ' e.Graphics.FillRectangle(Brushes.Black, 50, 100, 200, 150) ' background back
-        ' e.Graphics.DrawString(Defect_LB_STATUS, Label13.Font, Brushes.Black, 5, 5) 
-        'TAG LAYOUT แนวตั้ง
         e.Graphics.DrawLine(aPen, 9, 5, 9, 280) 'แก้ตำแหน่งที่ 1 , 3เส้นเปิด  NC/NG
-
-
         e.Graphics.DrawLine(aPen, 120, 5, 120, 230) 'แก้ตำแหน่งที่ 1 , 3เส้นเปิด  NC/NG
-
-
         e.Graphics.DrawLine(aPen, 680, 5, 680, 250) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
-
         e.Graphics.DrawLine(aPen, 560, 5, 560, 192) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
-
         e.Graphics.DrawLine(aPen, 425, 100, 425, 192) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
-
         e.Graphics.DrawLine(aPen, 320, 190, 320, 230) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
-
         e.Graphics.DrawLine(aPen, 460, 190, 460, 230) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
         e.Graphics.DrawLine(aPen, 585, 190, 585, 280) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
         e.Graphics.DrawLine(aPen, 680, 5, 680, 280) 'แก้ตำแหน่งที่ 1 , 3 เส้นปิด  NC/NG
-
-
-        'Horizontal แนวนอน
-
         e.Graphics.DrawLine(aPen, 8, 5, 681, 5) 'แก้ตำแหน่งที่ 2 , 4
-
         e.Graphics.DrawLine(aPen, 120, 55, 560, 55) 'แก้ตำแหน่งที่ 2 , 4 part no
-
         e.Graphics.DrawLine(aPen, 120, 100, 681, 100) 'แก้ตำแหน่งที่ 2 , 4 part name
-
         e.Graphics.DrawLine(aPen, 120, 145, 681, 145) 'แก้ตำแหน่งที่ 2 , 4 model
-
         e.Graphics.DrawLine(aPen, 120, 190, 681, 190) 'แก้ตำแหน่งที่ 2 , 4 Actual Date
-
-
         e.Graphics.FillRectangle(Brushes.Black, 10, 100, 110, 20) ' background back
         e.Graphics.DrawString("INFO.", IN_FO.Font, Brushes.White, 46, 101)
         e.Graphics.FillRectangle(Brushes.Black, 10, 210, 110, 20) ' background back
@@ -152,92 +116,43 @@ Public Class PrintDefect
         e.Graphics.DrawLine(aPen, 8, 280, 681, 280) 'แก้ตำแหน่งที่ 2 , 4
         'Details'
         e.Graphics.DrawString("PART NO:", title.Font, Brushes.Black, 130, 10)
-        e.Graphics.DrawString(lPartno, values.Font, Brushes.Black, 150, 31)
-
+        e.Graphics.DrawString(part_no, values.Font, Brushes.Black, 150, 31)
+        e.Graphics.DrawString(typeproduct, Label1.Font, Brushes.Black, 560, 20)
         e.Graphics.DrawString("PART NAME:", title.Font, Brushes.Black, 130, 60)
-        e.Graphics.DrawString(lPartname, values.Font, Brushes.Black, 150, 78)
-
+        e.Graphics.DrawString(PART_NAME, values.Font, Brushes.Black, 150, 78)
         e.Graphics.DrawString("MODEL:", title.Font, Brushes.Black, 130, 105)
-        e.Graphics.DrawString(lModel, values.Font, Brushes.Black, 150, 122)
+        e.Graphics.DrawString(Model, values.Font, Brushes.Black, 150, 122)
         e.Graphics.DrawString("LINE:", title.Font, Brushes.Black, 430, 105)
-        e.Graphics.DrawString(lLine, values.Font, Brushes.Black, 460, 122)
+        e.Graphics.DrawString(LINE, values.Font, Brushes.Black, 460, 122)
         e.Graphics.DrawString("LOT NO:", title.Font, Brushes.Black, 570, 105)
-        e.Graphics.DrawString(lLot, values.Font, Brushes.Black, 610, 122)
+        e.Graphics.DrawString(LOT_NO, values.Font, Brushes.Black, 610, 122)
         e.Graphics.DrawString("ACTUAL DATE : ", title.Font, Brushes.Black, 130, 150)
-        e.Graphics.DrawString(lActualdate, values.Font, Brushes.Black, 150, 167)
+        e.Graphics.DrawString(date_check_q_gate, values.Font, Brushes.Black, 150, 167)
         e.Graphics.DrawString("LOCATION :", title.Font, Brushes.Black, 430, 150)
-        e.Graphics.DrawString(lLocation, values.Font, Brushes.Black, 445, 167)
+        e.Graphics.DrawString(location, values.Font, Brushes.Black, 445, 167)
         e.Graphics.DrawString("SHIFT : ", title.Font, Brushes.Black, 130, 197)
-        e.Graphics.DrawString(lShift, values.Font, Brushes.Black, 191, 210)
+        e.Graphics.DrawString(SHIFT, values.Font, Brushes.Black, 191, 210)
         e.Graphics.DrawString("PHASE :", title.Font, Brushes.Black, 325, 197)
-        e.Graphics.DrawString(lPhase, values.Font, Brushes.Black, 390, 210)
+        e.Graphics.DrawString(10, values.Font, Brushes.Black, 390, 210)
         e.Graphics.DrawString("BOX NO :", title.Font, Brushes.Black, 470, 197)
-        e.Graphics.DrawString(bNo, values.Font, Brushes.Black, 510, 210)
+        e.Graphics.DrawString(BOX_NO, values.Font, Brushes.Black, 510, 210)
         e.Graphics.DrawString("DEFECT CODE :", detail_code.Font, Brushes.Black, 15, 236)
-        'Dim Cdata As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(rs)
-
+        e.Graphics.DrawString(defectcode, values.Font, Brushes.Black, 130, 236)
         Dim i As Integer = 1
         Dim cNumber As Integer = 1
         Dim dataDefect As String = " " '
         Dim dataQrdefectcodedetails As String = ""
         Dim mgtop As Integer = 250
         Dim mgleft As Integer = 15
-        'If dfAdminHome.dfCatType = "Adjust" Then
-        'For Each item As Object In Cdata
-        '    'tDefect = item("total_defect_all").ToString()
-        '    dataDefect = Trim(item("da_code").ToString()) & " = " & Trim(item("total_defect").ToString())
-        '        dataQrdefectcodedetails += Trim(item("da_code").ToString()) & " = " & Trim(item("total_defect").ToString())
-        '        If cNumber < Cdata.count Then
-        '            dataDefect += " | "
-        '            dataQrdefectcodedetails += " | "
-        '        End If
-        '        If cNumber > 20 Then
-        '            dataDefect = "..."
-        '        End If
-        '        e.Graphics.DrawString(dataDefect, detail_code.Font, Brushes.Black, mgleft, mgtop)
-        '        ' If cNumber > 20 Then
-        '        ' GoTo outloop
-        '        ' End If
-        '        mgleft += 52
-        '        If i Mod 10 = 0 And cNumber < 20 Then
-        '            mgtop = mgtop + 15
-        '            mgleft = 15
-        '            i = 0
-        '        End If
-        '        i += 1
-        '        cNumber += 1
-        '    Next
-        ''ElseIf dfAdminHome.dfCatType = "Register" Then
-        'dataDefect = Trim(lCodedefect) & " = " & Trim(qtyDefect)
-        '    dataQrdefectcodedetails += Trim(lCodedefect) & " = " & Trim(qtyDefect)
         e.Graphics.DrawString(dataDefect, detail_code.Font, Brushes.Black, mgleft, mgtop)
-        '        'End If
         e.Graphics.DrawString("QTY :", title.Font, Brushes.Black, 570, 150)
-        e.Graphics.DrawString(qtyDefect, values.Font, Brushes.Black, 610, 167)
-        '        If Len(qtyDefect) = 1 Then
-        '            lQtydefect = "0000" & qtyDefect
-        '        ElseIf Len(qtyDefect) = 2 Then
-        '            lQtydefect = "000" & qtyDefect
-        '        ElseIf Len(qtyDefect) = 3 Then
-        '            lQtydefect = "00" & qtyDefect
-        '        ElseIf Len(qtyDefect) = 4 Then
-        '            lQtydefect = "0" & qtyDefect
-        '        ElseIf Len(qtyDefect) = 5 Then
-        '            lQtydefect = qtyDefect
-        '        End If
-        '        qrDefectinfo = "DF" & " " & sDefect & " " & lLine & " " & lwi & " " & lSeq & " " & lLot & " " & pCd & " " & bNo & " " & lQtydefect & " " & lPartno
-        '        qrDefectcodedetails = dataQrdefectcodedetails
-        'outloop:
-        'PictureBox1.Image = QR_Generator.Encode(qrDefectinfo)
-        'e.Graphics.DrawImage(PictureBox1.Image, 20, 10, 85, 85) 'top left'
-        'e.Graphics.DrawImage(PictureBox1.Image, 592, 195, 80, 80) 'buttom right'
-        ''PictureBox1.Image = QR_Generator.Encode(qrDefectcodedetails)
-        'e.Graphics.DrawImage(PictureBox1.Image, 20, 125, 85, 85) 'bottom left'
-        'Dim date_now = DateTime.Now.ToString("yyyy-MM-dd H:m:s")
-        'Dim dti_status_flg = "" 'FG = 1 , 2 = CP
-        'Dim rsInserttagdefect = md.mInserttagdefect(lwi, lLine, lPartno, lItemtype, lLot, lSeq, sDefect, CDbl(Val(lQtydefect)), TypeMenu, bNo, qrDefectinfo, qrDefectcodedetails, lItemtype, date_now, lLine, date_now, lLine)
-
+        e.Graphics.DrawString(QTY, values.Font, Brushes.Black, 610, 167)
+        Dim qrcode As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
+        qrcode.QRCodeScale = 10
+        Dim bitmap_qr_box As Bitmap = qrcode.Encode(qrtagdefect)
+        Dim bitmap_qr_product As Bitmap = qrcode.Encode(QR_PRODUCT)
+        e.Graphics.DrawImage(bitmap_qr_box, 595, 198, 75, 75) 'button right
+        e.Graphics.DrawImage(bitmap_qr_box, 25, 15, 75, 75) 'top left
+        e.Graphics.DrawImage(bitmap_qr_product, 25, 128, 75, 75) 'button right
     End Sub
-
-
 End Class

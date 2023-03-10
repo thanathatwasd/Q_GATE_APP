@@ -18,6 +18,7 @@ Module Module1
     Public ctUser As Integer = 0
     Public num_user(4) As String
     Public num_user_code(4) As String
+
     Public user1 As String = ""
     Public user2 As String = ""
     Public user3 As String = ""
@@ -28,8 +29,6 @@ Module Module1
     Public userpermi(4) As String
     Public Locationpart As String = ""
     Public phaseplant As String = ""
-    Public delUser = 0
-    Public selectpic = 0
     Public timenow
     Public staffid As Integer = 0
     Public staffid2 As Integer = 0
@@ -69,8 +68,8 @@ Module Module1
     Public Macaddress
     Public dmcornondmc As String = ""
     Public productcount = 0
-    Public productcountNG = 0
-    Public productcountNC = 0
+    Public productcountNG
+    Public productcountNC
     Public partnofornondmc As String = ""
     Public workshift
     Public workdate
@@ -85,6 +84,11 @@ Module Module1
     Public zoneid As String = ""
     Public station As String = ""
     Public setphaseid As String
+    Public countng = 0
+    Public countnc = 0
+    Public countboxng = 0
+    Public countboxnc = 0
+
     Public setzoneid As String
     Public setstationid As String
     Public zoneset
@@ -93,9 +97,16 @@ Module Module1
     Public defectnc As String
     Public defectng As String
     Public timetomorrow
+    Public CountBoxDefect = 0
+    Public CountNumDefect = 0
+    Public numng = 0
+    Public numnc = 0
+    Public boxnumng = 0
+    Public boxnumnc = 0
+    Public defectcountidng = 0
+    Public defectcountidnc = 0
     Function getMacAddress()
         Dim nics() As NetworkInterface = NetworkInterface.GetAllNetworkInterfaces
-
         Return nics(0).GetPhysicalAddress.ToString
 
     End Function

@@ -269,7 +269,27 @@
 
     End Function
 
+    Public Function get_NumDefect(datecurr As String, configposition As String, partno As String)
 
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getNumDefect?datecurr=" & datecurr & "&configposition=" & configposition & "&partno=" & partno
+        Dim rs = Api.Load_data(URL)
+        'MsgBox("RS===>" & rs)
+        Return rs
+
+
+    End Function
+
+    Public Function get_BoxDefect(datecurr As String, configposition As String, partno As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getBoxDefect?datecurr=" & datecurr & "&configposition=" & configposition & "&partno=" & partno
+        Dim rs = Api.Load_data(URL)
+        'MsgBox("RS===>" & rs)
+        Return rs
+
+
+    End Function
 
 
 
@@ -328,10 +348,10 @@
 
     End Function
 
-    Public Function get_DataDefectCount(productdefectid As String, datecurrent As String, producttype As String)
+    Public Function get_DataDefectCount(configposition As String, producttype As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getDefectCount?productdefectid=" & productdefectid & "&datecurrent=" & datecurrent & "&producttype=" & producttype
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getDefectCount?configposition=" & configposition &  "&producttype=" & producttype
         Dim rs = Api.Load_data(URL)
 
         Return rs
@@ -447,10 +467,10 @@
         Return rs
     End Function
 
-    Public Function insert_Info_Defect(defectid As String, qrid As String, numng As String, staffname As String)
+    Public Function insert_Info_Defect(defectid As String, qrid As String, numng As String, staffname As String, defectcountid As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertInfoDefect?defectid=" & defectid & "&qrid=" & qrid & "&numng=" & numng & "&staffname=" & staffname
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertInfoDefect?defectid=" & defectid & "&qrid=" & qrid & "&numng=" & numng & "&staffname=" & staffname & "&defectcountid=" & defectcountid
         Dim rs = Api.Load_data(URL)
         'MsgBox("RS===>" & rs)
         Return rs
@@ -458,14 +478,14 @@
 
     End Function
 
-    Public Function insert_Defect_Count(stationid As String, defectcodeid As String, numdefect As String, staffname As String, ngornc As String)
+    'Public Function insert_Defect_Count(stationid As String, defectcodeid As String, numdefect As String, staffname As String, ngornc As String)
 
-        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertDefectcount?stationid=" & stationid & "&defectcodeid=" & defectcodeid & "&numdefect=" & numdefect & "&staffname=" & staffname & "&ngornc=" & ngornc
-        Dim rs = Api.Load_data(URL)
+    '    Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+    '    Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertDefectcount?stationid=" & stationid & "&defectcodeid=" & defectcodeid & "&numdefect=" & numdefect & "&staffname=" & staffname & "&ngornc=" & ngornc
+    '    Dim rs = Api.Load_data(URL)
 
-        Return rs
-    End Function
+    '    Return rs
+    'End Function
 
 
     Public Function insert_Tag_Qgate_complete(oldtag As String, countbox As String, tagcount As String, empcode As String, tagcomplete As String)
@@ -478,16 +498,24 @@
     End Function
 
 
-    Public Function insert_info_part_count(defectgroupid As String, productype As String, countdefect As String, staffcode As String, partno As String)
+    Public Function insert_info_part_count(configposition As String, productype As String, countdefect As String, staffcode As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertInfoDefectCount?defectgroupid=" & defectgroupid & "&productype=" & productype & "&countdefect=" & countdefect & "&staffcode=" & staffcode & "&partno=" & partno
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertInfoDefectCount?configposition=" & configposition & "&productype=" & productype & "&countdefect=" & countdefect & "&staffcode=" & staffcode
         Dim rs = Api.Load_data(URL)
 
         Return rs
     End Function
 
 
+    Public Function insert_info_tagdefect(defectcountid As String, printtagcount As String, staffcode As String, tagdefect As String, boxdefect As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertinfotagdefect?defectcountid=" & defectcountid & "&printtagcount=" & printtagcount & "&staffcode=" & staffcode & "&tagdefect=" & tagdefect & "&boxdefect=" & boxdefect
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+    End Function
 
 
 
@@ -542,6 +570,14 @@
         Return rs
     End Function
 
+    Public Function update_delete_macadd_old(macaddress As String)
+
+        Dim Api As New api()
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/updatedata/updateconfigdeletemacaddold?macaddress=" & macaddress
+        Dim rs = Api.Load_data(URL)
+        Return rs
+    End Function
+
 
     Public Function update_flg_product_Manual(tagfa As String, productcount As String)
 
@@ -558,10 +594,10 @@
         Return rs
     End Function
 
-    Public Function update_Defect_Count(defectgroupid As String, countdefect As String, staffcode As String, datatecurrent As String, producttype As String)
+    Public Function update_Defect_Count(configposition As String, countdefect As String, staffcode As String, datatecurrent As String, producttype As String)
 
         Dim Api As New api()
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/updatedata/updateDefectCount?defectgroupid=" & defectgroupid & "&countdefect=" & countdefect & "&staffcode=" & staffcode & "&datatecurrent=" & datatecurrent & "&producttype=" & producttype
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/updatedata/updateDefectCount?configposition=" & configposition & "&countdefect=" & countdefect & "&staffcode=" & staffcode & "&datatecurrent=" & datatecurrent & "&producttype=" & producttype
         Dim rs = Api.Load_data(URL)
         Return rs
     End Function
@@ -581,10 +617,10 @@
 
 
 
-    Public Function get_Phase_Zone(phase As String, zone As String)
+    Public Function get_Phase_Zone(phase As String, zone As String, station As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getIdPhaseAndZone?phase=" & phase & "&zone=" & zone
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getIdPhaseAndZone?phase=" & phase & "&zone=" & zone & "&station=" & station
         Dim rs = Api.Load_data(URL)
         'MsgBox("RS===>" & rs)
         Return rs
@@ -694,6 +730,16 @@
 
 
     End Function
+    Public Function get_Tag_Print_Defect(tagdefectid As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getTagDefect?tagdefectid=" & tagdefectid
+        Dim rs = Api.Load_data(URL)
+        'MsgBox("RS===>" & rs)
+        Return rs
+
+
+    End Function
 
     Public Function get_Mac_Address(macaddress As String)
 
@@ -706,6 +752,7 @@
 
 
     End Function
+
 
     Public Function get_Zone_Set_menu(zone As String)
 
@@ -759,27 +806,38 @@
     End Function
 
 
-    Public Function insert_log_reprint_Defect(tagconpleteid As String, empcode As String)
+    'Public Function insert_log_reprint_Defect(tagconpleteid As String, empcode As String)
+
+
+
+    '    Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+    '    Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertlogreprintDefect?tagconpleteid=" & tagconpleteid & "&empcode=" & empcode
+    '    Dim rs = Api.Load_data(URL)
+
+    '    Return rs
+    'End Function
+
+    Public Function insert_log_reprint_Defect(tagdefectid As String, empcode As String)
 
 
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertlogreprintDefect?tagconpleteid=" & tagconpleteid & "&empcode=" & empcode
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/insertdata/insertlogreprintdefect?tagdefectid=" & tagdefectid & "&empcode=" & empcode
         Dim rs = Api.Load_data(URL)
 
         Return rs
     End Function
 
 
-    Public Function update_config_macaddress(phase As String, zone As String, station As String, macaddress As String, empcode As String)
+    Public Function update_config_macaddress(phase As String, zone As String, station As String, macaddress As String, empcode As String, setdefaultpartno As String)
 
         Dim Api As New api()
-        Dim URL = "http://" & get_LocalHost() & "/apiQgate/updatedata/updateConfigMacAddress?phase=" & phase & "&zone=" & zone & "&station=" & station & "&macaddress=" & macaddress & "&empcode=" & empcode
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/updatedata/updateConfigMacAddress?phase=" & phase & "&zone=" & zone & "&station=" & station & "&macaddress=" & macaddress & "&empcode=" & empcode & "&setdefaultpartno=" & setdefaultpartno
         Dim rs = Api.Load_data(URL)
         Return rs
     End Function
 
-    Public Function get_QRProductToGenQr(tagfa As String)
+    Public Function Get_QRProductToGenQr(tagfa As String)
 
         Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
         Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getQRProductToGenQr?tagfa=" & tagfa
@@ -790,6 +848,27 @@
 
     End Function
 
+    Public Function Get_AllDefect(defectcountid As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getAllDefect?defectcountid=" & defectcountid
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+
+
+    End Function
+
+    Public Function Get_IDDefectCount(configposition As String)
+
+        Dim Api As New api() 'สร้าง ฟังก์ชั่นมา ด้านนหลังคือชื่อคลาส *ชื่อ class กับ func ต้องเหมือนกันเสมอ
+        Dim URL = "http://" & get_LocalHost() & "/apiQgate/getdata/getIDDefectCount?configposition=" & configposition
+        Dim rs = Api.Load_data(URL)
+
+        Return rs
+
+
+    End Function
 
 
 

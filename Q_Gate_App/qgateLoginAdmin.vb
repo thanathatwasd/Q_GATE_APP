@@ -11,8 +11,6 @@ Public Class qgateLoginAdmin
             If checkLoginAdmin(tbLoginAdmin.Text) Then
                 qgateMenuAdmin.Show()
                 Me.Close()
-
-
             End If
         End If
     End Sub
@@ -22,37 +20,38 @@ Public Class qgateLoginAdmin
         Me.Close()
     End Sub
     Public Function checkLoginAdmin(empCard As String)
-        rsCheckUser = md.get_DataUser((empCard))
-        Try
-            If rsCheckUser <> "0" Then
-
-                Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(rsCheckUser)
-                For Each item As Object In dict2
-                    staffid = item("ss_id").ToString
-                    permissionid = item("spg_id").ToString
-                    If permissionid = 1 Then
-
-                        qgateMenuAdmin.Label1.Text = rsCheckUser
-                        Dim activelogin = md.insert_active_login(empCard)
-                        status = True
-                    Else
-                        MsgBox("Your Permission is not Allow")
-                        tbLoginAdmin.Text = ""
-                        status = False
-                    End If
-                Next
-            Else
-                MsgBox("Login Fail")
-                tbLoginAdmin.Text = ""
+        If My.Computer.Network.Ping(md.get_DatabaseServer()) Then
+            rsCheckUser = md.get_DataUser((empCard))
+            Try
+                If rsCheckUser <> "0" Then
+                    Dim dict2 As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(rsCheckUser)
+                    For Each item As Object In dict2
+                        staffid = item("ss_id").ToString
+                        permissionid = item("spg_id").ToString
+                        If permissionid = 1 Then
+                            adminconfig = empCard
+                            qgateMenuAdmin.Label1.Text = rsCheckUser
+                            Dim activelogin = md.insert_active_login(empCard)
+                            status = True
+                        Else
+                            MsgBox("Your Permission is not Allow")
+                            tbLoginAdmin.Text = ""
+                            status = False
+                        End If
+                    Next
+                Else
+                    MsgBox("Login Fail")
+                    tbLoginAdmin.Text = ""
+                    status = False
+                End If
+            Catch ex As Exception
                 status = False
-            End If
-
-        Catch ex As Exception
-            status = False
-            MsgBox("LOGIN FAIL")
-            tbLoginAdmin.Text = ""
-        End Try
-        Return status
+                MsgBox("LOGIN FAIL")
+                tbLoginAdmin.Text = ""
+            End Try
+            Return status
+            MsgBox("Waiting Internet")
+        End If
     End Function
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -61,10 +60,7 @@ Public Class qgateLoginAdmin
 
     Private Sub qgateLoginAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
-
     End Sub
-
-
     Private Sub tbLoginAdmin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbLoginAdmin.KeyPress
         Select Case Asc(e.KeyChar)
             Case 48 To 122 ' โค๊ดภาษาอังกฤษ์ตามจริงจะอยู่ที่ 58ถึง122 แต่ที่เอา 48มาเพราะเราต้องการตัวเลข
@@ -73,7 +69,6 @@ Public Class qgateLoginAdmin
                 e.Handled = False
             Case Else
                 e.Handled = True
-
         End Select
     End Sub
 End Class

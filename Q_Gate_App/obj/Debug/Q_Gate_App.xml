@@ -22,7 +22,17 @@ Q_Gate_App
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Q_Gate_App.My.Resources.Resources._3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Q_Gate_App.My.Resources.Resources._53962">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.Add_user">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -48,6 +58,16 @@ Q_Gate_App
 </summary>
 </member>
 <member name="P:Q_Gate_App.My.Resources.Resources.DefectScanPrint">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.Del_user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.Del_user1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -223,6 +243,11 @@ Q_Gate_App
 </summary>
 </member>
 <member name="P:Q_Gate_App.My.Resources.Resources.Reprint">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.Reprint_defect">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
