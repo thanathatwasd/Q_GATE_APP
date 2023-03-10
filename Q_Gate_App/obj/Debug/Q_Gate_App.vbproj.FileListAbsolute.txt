@@ -97,3 +97,4 @@ C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\obj\Debug\Q_Gate_App.vbpro
 C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\obj\Debug\Q_Gate_App.exe
 C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\obj\Debug\Q_Gate_App.xml
 C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\obj\Debug\Q_Gate_App.pdb
+C:\Users\thana\OneDrive\Desktop\Q_GATE_APP\Q_Gate_App\obj\Debug\Q_Gate_App.vbproj.AssemblyReference.cache

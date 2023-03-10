@@ -510,6 +510,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="3.ico" />
+    <None Include="Resources\REPRINT Q-GATE DATE.jpg" />
+    <None Include="Resources\REPRINT Q-GATE.jpg" />
     <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_10.jpg" />
     <None Include="Resources\LINE_ALBUM_Alert and button_230220_42.jpg" />
     <None Include="Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_15.jpg" />

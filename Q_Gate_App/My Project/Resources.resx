@@ -124,9 +124,6 @@
   <data name="DefectScanPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefectScanPrint.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Reprint_defect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Reprint_defect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LINE_ALBUM_Alert and button_230222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LINE_ALBUM_Alert and button_230222.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +133,14 @@
   <data name="Menu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LINE_ALBUM_หน้าจอ Q-gate_230220_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Menu22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPRINT Q-GATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPRINT Q-GATE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LINE_ALBUM_Alert and button_230220_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LINE_ALBUM_Alert and button_230220_42.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +157,11 @@
   <data name="LINE_ALBUM_หน้าจอ Q-gate_230220_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LINE_ALBUM_หน้าจอ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LINE_ALBUM_หน้าจอ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefectNC_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefectNC_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DefectNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefectNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DefectNC_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DefectNC_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Finish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Finish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,11 +196,14 @@
   <data name="Login_Admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login_Admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LINE_ALBUM_หน้าจอ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_หน้าจอ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="53962" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\53962.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reprint_defect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reprint_defect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LINE_ALBUM_หน้าจอ Q-gate_230224_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230224_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -231,6 +234,9 @@
   </data>
   <data name="LINE_ALBUM_หน้าจอ Q-gate_230224_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230224_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINE_ALBUM_Alert_and_button_230222_0-removebg-preview-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,7 +304,7 @@
   <data name="OperationDMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OperationDMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LINE_ALBUM_หน้าจอ Q-gate_230220_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LINE_ALBUM_หน้าจอ Q-gate_230220_10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="REPRINT Q-GATE DATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPRINT Q-GATE DATE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -176,7 +176,7 @@ Partial Class qgateReprintTag
         '
         'qgateReprintTag
         '
-        Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.LINE_ALBUM_หน้าจอ_Q_gate_230220_15
+        Me.BackgroundImage = Global.Q_Gate_App.My.Resources.Resources.REPRINT_Q_GATE_DATE
         Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.lvDetail1)
         Me.Controls.Add(Me.CbLotNum1)

@@ -267,6 +267,16 @@ Q_Gate_App
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Q_Gate_App.My.Resources.Resources.REPRINT_Q_GATE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Q_Gate_App.My.Resources.Resources.REPRINT_Q_GATE_DATE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Q_Gate_App.My.Resources.Resources.Sample_User_Icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
